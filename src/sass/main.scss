@@ -1,0 +1,39 @@
+@import 'component/shared/shared';
+@import 'component/nav/navbar';
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    // background-color: $color-white;
+    box-sizing: border-box;
+}
+
+.white-mode {
+    background-color: $color-white;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.25s linear;
+}
+
+.dart-mode {
+    background-color: $color-dart;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.25s linear;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+h1 {
+    color: $color-gray;
+}

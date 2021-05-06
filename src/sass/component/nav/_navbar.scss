@@ -1,0 +1,117 @@
+@import '../shared/shared';
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+
+    &__list {
+        ul {
+            display: flex;
+            padding: 0;
+        }
+
+        ul>li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            font-size: 1.125rem;
+            box-sizing: border-box;
+            // width: 3.125rem;
+            // transition: width .5s ease-in-out;
+
+            &:not(:last-child) {
+                margin-right: 1.625rem;
+            }
+
+            &:hover {
+                cursor: pointer;
+                // font-weight: bold;
+            }
+
+            &.underline {
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 0rem;
+                    border-radius: .625rem;
+                    transition: width .2s ease-out;
+                }
+
+                &:hover::before {
+                    content: '';
+                    position: absolute;
+                    bottom: -.5rem;
+                    height: .25rem;
+                    width: 3.3125rem;
+                    border-radius: .625rem;
+                    background-color: $color-purple;
+                }
+            }
+        }
+    }
+
+    &__logo {
+        svg {
+            width: 1.5rem;
+            height: 1.5rem;
+
+            &.active {
+                background-color: $color-purple;
+            }
+        }
+    }
+
+    &__icons {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        fill: $color-gray;
+
+        svg:not(:last-child) {
+            margin-right: 0.625rem;
+        }
+
+        svg {
+            width: 1.5rem;
+            height: 1.5rem;
+
+        }
+
+        .dart {
+            fill: $color-dart;
+            transition: all .5s ease-in;
+        }
+
+        .white {
+            fill: $color-white;
+            transition: all .5s ease-out;
+
+        }
+
+
+    }
+
+    &__button {
+        width: 9.375rem;
+        height: 2.8125rem;
+        color: #5352ED;
+        border: 0.13rem solid #5352ED;
+        box-sizing: border-box;
+        border-radius: 0.5rem;
+        background-color: $color-white;
+        font-family: 'Rubik', sans-serif;
+        font-weight: 500;
+        font-size: 1rem;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+}
