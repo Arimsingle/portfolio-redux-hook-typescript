@@ -1,0 +1,92 @@
+@import '../shared/shared';
+
+section {
+    box-sizing: border-box;
+    padding: 1.875rem;
+}
+
+.text {
+    text-align: center;
+
+    &__header {
+        font-size: 3.125rem;
+        font-weight: normal;
+        line-height: 1.5rem;
+        color: $color-dart;
+    }
+
+    &__highlight {
+        color: $color-purple;
+    }
+}
+
+.photo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+
+    &__header {
+        position: relative;
+        top: -9.375rem;
+        width: 37.5rem;
+        height: 37.5rem;
+    }
+
+    &__scroll {
+        box-shadow: inset 0 0 0 2px $color-white;
+    }
+
+    &__scroll_dart {
+        box-shadow: inset 0 0 0 2px $color-dart;
+
+    }
+
+    &__scroll,
+    &__scroll_dart {
+        position: absolute;
+        top: 550px;
+        display: flex;
+        align-items: center;
+        width: 40px;
+        height: 70px;
+        border-radius: 25px;
+
+        &::before {
+            position: relative;
+            left: 50%;
+        }
+
+        &::before {
+            content: '';
+            width: 12px;
+            height: 18px;
+            background: $color-purple;
+            margin-left: -6px;
+            top: -15px;
+            border-radius: 8px;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: ease-in;
+            animation-name: scroll;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        @keyframes scroll {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(46px);
+            }
+        }
+    }
+
+}

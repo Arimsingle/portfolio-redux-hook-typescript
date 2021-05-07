@@ -2,10 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { themeService } from "../redux/services";
 import { AppState } from "../redux/store";
 const Nav = () => {
-  // const [activeSun, setActiveSun] = useState<boolean>(false);
-  // const [activeMoon, setActiveMoon] = useState<boolean>(false);
-  // console.log(activeSun);
-  // console.log(activeSun);
+  
   //theme default is dart color
   const toggleTheme = useSelector((state: AppState) => state.theme);
   console.log(toggleTheme);
@@ -19,7 +16,7 @@ const Nav = () => {
             <h1
               style={toggleTheme ? { color: "#4F5665" } : { color: "#FFFFFF" }}
             >
-              LOGO
+              PORTFOLIO
             </h1>
           </div>
           <div className="navbar__list">

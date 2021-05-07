@@ -1,4 +1,5 @@
 import Nav from "./components/Nav";
+import Home from "./components/section/Home";
 import { useSelector } from "react-redux";
 import { AppState } from "./redux/store";
 const App: React.FC = () => {
@@ -9,6 +10,7 @@ const App: React.FC = () => {
       <header>
         <Nav />
       </header>
+      <Home />
     </div>
   );
 };
