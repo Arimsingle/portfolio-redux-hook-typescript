@@ -2,7 +2,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { themeService } from "../redux/services";
 import { AppState } from "../redux/store";
 const Nav = () => {
-  
   //theme default is dart color
   const toggleTheme = useSelector((state: AppState) => state.theme);
   console.log(toggleTheme);
@@ -14,9 +13,10 @@ const Nav = () => {
         <div className="navbar">
           <div className="navbar__logo">
             <h1
-              style={toggleTheme ? { color: "#4F5665" } : { color: "#FFFFFF" }}
+              style={toggleTheme ? { color: "#121212" } : { color: "#fe8019" }}
+              className="logo"
             >
-              PORTFOLIO
+              有馬
             </h1>
           </div>
           <div className="navbar__list">
@@ -24,7 +24,7 @@ const Nav = () => {
               <li
                 className="underline active"
                 style={
-                  toggleTheme ? { color: "#4F5665" } : { color: "#FFFFFF" }
+                  toggleTheme ? { color: "#121212" } : { color: "#fbf1c7" }
                 }
               >
                 Home
@@ -32,7 +32,7 @@ const Nav = () => {
               <li
                 className="underline"
                 style={
-                  toggleTheme ? { color: "#4F5665" } : { color: "#FFFFFF" }
+                  toggleTheme ? { color: "#121212" } : { color: "#fbf1c7" }
                 }
               >
                 About
@@ -40,7 +40,7 @@ const Nav = () => {
               <li
                 className="underline"
                 style={
-                  toggleTheme ? { color: "#4F5665" } : { color: "#FFFFFF" }
+                  toggleTheme ? { color: "#121212" } : { color: "#fbf1c7" }
                 }
               >
                 Project
@@ -48,7 +48,7 @@ const Nav = () => {
               <li
                 className="underline"
                 style={
-                  toggleTheme ? { color: "#4F5665" } : { color: "#FFFFFF" }
+                  toggleTheme ? { color: "#121212" } : { color: "#fbf1c7" }
                 }
               >
                 Skill
@@ -56,7 +56,7 @@ const Nav = () => {
               <li
                 className="underline"
                 style={
-                  toggleTheme ? { color: "#4F5665" } : { color: "#FFFFFF" }
+                  toggleTheme ? { color: "#121212" } : { color: "#fbf1c7" }
                 }
               >
                 Blog
@@ -100,7 +100,7 @@ const Nav = () => {
               >
                 <path
                   d="M15.157 11.0054C14.3313 11.0054 13.662 11.9334 13.662 13.0742C13.662 14.2173 14.3313 15.1454 15.157 15.1454C15.9827 15.1454 16.652 14.2173 16.652 13.0742C16.6508 11.9334 15.9827 11.0054 15.157 11.0054ZM20.3619 5.6199C20.5332 5.20015 20.5401 2.81505 19.6316 0.529999C19.6316 0.529999 17.549 0.758849 14.398 2.922C13.7367 2.738 12.6178 2.6483 11.5011 2.6483C10.3822 2.6483 9.2644 2.738 8.60315 2.922C5.451 0.758849 3.36835 0.529999 3.36835 0.529999C2.461 2.81505 2.4702 5.20015 2.63925 5.6199C1.57205 6.7791 0.919998 8.17175 0.919998 10.0715C0.919998 18.3354 7.77745 18.4677 9.50705 18.4677L11.5011 18.47L13.4929 18.4677C15.2248 18.4677 22.08 18.3354 22.08 10.0715C22.08 8.17175 21.4291 6.7791 20.3619 5.6199ZM11.5322 17.4523H11.4678C7.13115 17.4523 3.75245 16.9359 3.75245 12.72C3.75245 11.7092 4.10895 10.773 4.9565 9.99565C6.36755 8.6996 8.75725 9.385 11.4678 9.385H11.5322C14.2427 9.385 16.6336 8.6996 18.0458 9.99565C18.891 10.773 19.2475 11.7092 19.2475 12.72C19.2475 16.9359 15.87 17.4523 11.5322 17.4523ZM7.84415 11.0054C7.01845 11.0054 6.34915 11.9334 6.34915 13.0742C6.34915 14.2173 7.01845 15.1454 7.84415 15.1454C8.671 15.1454 9.3403 14.2173 9.3403 13.0742C9.3403 11.9334 8.671 11.0054 7.84415 11.0054Z"
-                  fill={toggleTheme ? "#4F5665" : "white"}
+                  fill={toggleTheme ? "#121212" : "#fbf1c7"}
                 />
               </svg>
             </div>

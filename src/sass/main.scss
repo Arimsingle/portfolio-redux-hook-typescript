@@ -1,6 +1,7 @@
 @import 'component/shared/shared';
 @import 'component/nav/navbar';
 @import 'component/section/home';
+@import 'component/section/about';
 
 body {
     margin: 0;
@@ -13,7 +14,7 @@ body {
 }
 
 .white-mode {
-    background-color: $color-white;
+    background-color: #fff;
     height: 100vh;
     margin: 0;
     padding: 0;

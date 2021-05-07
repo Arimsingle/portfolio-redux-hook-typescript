@@ -1,0 +1,69 @@
+@import '../shared/shared';
+
+.about {
+    &__header {
+        margin: 0;
+        text-align: center;
+        font-weight: bold;
+        font-size: 80px;
+    }
+
+    &__content {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-around;
+
+        p {
+            font-size: 30px;
+            width: 800px;
+        }
+
+
+        .left_content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            .text {
+                display: flex;
+                align-items: center;
+                font-size: 25px;
+
+                .icon {
+                    margin-right: 10px;
+                }
+
+            }
+
+
+
+            .icon-container {
+                display: flex;
+                flex-direction: row;
+                margin-top: 20px;
+            }
+        }
+
+    }
+
+    &__circle {
+        position: absolute;
+        left: 9.38%;
+        right: 62.29%;
+        top: 44.14%;
+        bottom: 40.87%;
+    }
+}
+
+.about li {
+    list-style: none;
+}
+
+.about ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+}

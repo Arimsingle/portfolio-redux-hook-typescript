@@ -1,5 +1,6 @@
 import Nav from "./components/Nav";
 import Home from "./components/section/Home";
+import About from "./components/section/About";
 import { useSelector } from "react-redux";
 import { AppState } from "./redux/store";
 const App: React.FC = () => {
@@ -10,7 +11,12 @@ const App: React.FC = () => {
       <header>
         <Nav />
       </header>
-      <Home />
+      <section className={handleThemeChanged()}>
+        <Home />
+      </section>
+      <section className={handleThemeChanged()}>
+        <About />
+      </section>
     </div>
   );
 };
