@@ -12,12 +12,7 @@ const Nav = () => {
       <nav className="container-navbar">
         <div className="navbar">
           <div className="navbar__logo">
-            <h1
-              style={toggleTheme ? { color: "#121212" } : { color: "#fe8019" }}
-              className="logo"
-            >
-              有馬
-            </h1>
+            <h1 className="logo">有馬</h1>
           </div>
           <div className="navbar__list">
             <ul>

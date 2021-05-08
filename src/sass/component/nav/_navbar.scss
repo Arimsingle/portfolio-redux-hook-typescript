@@ -49,7 +49,7 @@
                     height: .25rem;
                     width: 3.3125rem;
                     border-radius: .625rem;
-                    background-color: $color-orange;
+                    background-color: map-get($colors, orange-dart);
                 }
             }
         }
@@ -57,12 +57,13 @@
 
     &__logo {
         .logo {
+            color: map-get($colors, orange-dart);
             font-size: 2rem;
             transition: transform .1s linear;
         }
 
         .logo:hover {
-            color: $color-orange;
+            color: map-get($colors, orange-dart);
             cursor: pointer;
             transform: scale(1.1);
         }
@@ -72,11 +73,11 @@
             height: 1.5rem;
 
             &.active {
-                background-color: $color-purple;
+                background-color: map-get($colors, orange-dart);
             }
 
             &.not-active {
-                background-color: $color-white;
+                background-color: map-get($colors, orange-soft);
 
             }
         }
@@ -99,12 +100,12 @@
         }
 
         .dart {
-            fill: $color-dart;
+            fill: map-get($colors, dart);
             transition: all .5s ease-in;
         }
 
         .white {
-            fill: $color-white;
+            fill: map-get($colors, orange-soft);
             transition: all .5s ease-out;
 
         }
@@ -115,11 +116,11 @@
     &__button {
         width: 9.375rem;
         height: 2.8125rem;
-        color: $color-orange;
-        border: 0.13rem solid $color-orange;
+        color: map-get($colors, orange-dart);
+        border: 0.13rem solid map-get($colors, orange-dart);
         box-sizing: border-box;
         border-radius: 0.5rem;
-        background-color: $color-white;
+        background-color: map-get($colors, orange-soft);
         font-family: 'Rubik', sans-serif;
         font-weight: 500;
         font-size: 1rem;

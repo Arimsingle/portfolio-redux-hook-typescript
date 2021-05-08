@@ -13,6 +13,10 @@
         align-items: flex-end;
         justify-content: space-around;
 
+        .img-me {
+            border-radius: 50%;
+        }
+
         p {
             font-size: 30px;
             width: 800px;
@@ -25,10 +29,10 @@
             align-items: flex-start;
             justify-content: flex-start;
 
-            .text {
+            ul li {
+                font-size: 25px;
                 display: flex;
                 align-items: center;
-                font-size: 25px;
 
                 .icon {
                     margin-right: 10px;
@@ -36,12 +40,67 @@
 
             }
 
+            .dart {
+                color: map-get($colors, orange-medium);
+            }
+
+            .dart:hover {
+                color: map-get($colors, orange-soft);
+                cursor: pointer;
+
+            }
+
+            .soft {
+                color: map-get($colors, orange-medium);
+            }
+
+            .soft:hover {
+                color: map-get($colors, dart);
+                cursor: pointer;
+            }
+
+            // .text {
+            //     display: flex;
+            //     align-items: center;
+            //     font-size: 25px;
+
+            //     &__value.dart {
+            //         color: map-get($colors, orange-medium);
+            //     }
+
+            //     &__value.soft {
+            //         color: map-get($colors, orange-medium);
+            //     }
+
+            //     &__value {
+
+            //         &:hover {
+            //             color: map-get($colors, orange-soft);
+            //             cursor: pointer;
+            //         }
+            //     }
+
+            //     &__icon {
+            //         margin-right: 10px;
+
+            //         &:hover {
+            //             color: map-get($colors, orange-soft);
+            //         }
+            //     }
+
+            // }
+
+
 
 
             .icon-container {
                 display: flex;
                 flex-direction: row;
                 margin-top: 20px;
+            }
+
+            .icon-container li {
+                cursor: pointer;
             }
         }
 
