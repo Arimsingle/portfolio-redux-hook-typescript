@@ -5,113 +5,151 @@
         margin: 0;
         text-align: center;
         font-weight: bold;
-        font-size: 80px;
+        font-size: 5rem;
     }
 
     &__content {
         display: flex;
         align-items: flex-end;
         justify-content: space-around;
+        position: relative;
 
-        .img-me {
-            border-radius: 50%;
+        &__right {
+            .profile {
+                transition: all .5s ease-in-out;
+                position: relative;
+                display: block;
+                border-radius: 50%;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+                z-index: 1;
+
+                &:hover {
+                    transform: rotate(-45deg);
+                    cursor: pointer;
+
+                }
+            }
+
+            .profile2 {
+                transition: all .5s ease-in-out;
+                position: relative;
+                display: block;
+                border-radius: 50%;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+                z-index: 1;
+
+                &:hover {
+                    transform: rotate(45deg);
+                    cursor: pointer;
+                }
+            }
+
+            .ciecle {
+                position: absolute;
+                right: 250px;
+                top: 0px;
+                width: 430px;
+                height: 430px;
+                border-radius: 50%;
+                background-color: map-get($colors, orange-dart);
+            }
         }
+
 
         p {
-            font-size: 30px;
-            width: 800px;
+            font-size: 1.875rem;
+            width: 50rem;
         }
 
 
-        .left_content {
+        &__left {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             justify-content: flex-start;
+            position: relative;
+
+            .prosernal {
+                &::before {
+                    content: '"';
+                    top: -30px;
+                    position: absolute;
+                    font-size: 50px;
+                    color: map-get($colors, orange-dart);
+                }
+            }
+
+            .icon_notebook {
+                animation: transform 1s ease-in-out infinite;
+                // background-color: map-get($colors, orange-sort);
+                border-radius: 5px;
+
+                @keyframes transform {
+                    0% {
+                        background-color: red;
+
+                    }
+
+                    100% {
+                        background-color: blue;
+
+                    }
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+
+            }
+
 
             ul li {
-                font-size: 25px;
+                font-size: 1.5625rem;
                 display: flex;
                 align-items: center;
 
                 .icon {
-                    margin-right: 10px;
+                    margin-right: 0.625rem;
+
                 }
 
             }
 
-            .dart {
+            .dart_theme {
                 color: map-get($colors, orange-medium);
             }
 
-            .dart:hover {
+            .dart_theme:hover {
                 color: map-get($colors, orange-soft);
-                cursor: pointer;
+                cursor: default;
 
             }
 
-            .soft {
+            .soft_theme {
                 color: map-get($colors, orange-medium);
             }
 
-            .soft:hover {
+            .soft_theme:hover {
                 color: map-get($colors, dart);
-                cursor: pointer;
+                cursor: default;
+
             }
 
-            // .text {
-            //     display: flex;
-            //     align-items: center;
-            //     font-size: 25px;
-
-            //     &__value.dart {
-            //         color: map-get($colors, orange-medium);
-            //     }
-
-            //     &__value.soft {
-            //         color: map-get($colors, orange-medium);
-            //     }
-
-            //     &__value {
-
-            //         &:hover {
-            //             color: map-get($colors, orange-soft);
-            //             cursor: pointer;
-            //         }
-            //     }
-
-            //     &__icon {
-            //         margin-right: 10px;
-
-            //         &:hover {
-            //             color: map-get($colors, orange-soft);
-            //         }
-            //     }
-
-            // }
 
 
 
-
-            .icon-container {
+            .icon_container {
                 display: flex;
                 flex-direction: row;
-                margin-top: 20px;
+                margin-top: 1.25rem;
             }
 
-            .icon-container li {
+            .icon_container li {
                 cursor: pointer;
             }
         }
 
-    }
-
-    &__circle {
-        position: absolute;
-        left: 9.38%;
-        right: 62.29%;
-        top: 44.14%;
-        bottom: 40.87%;
     }
 }
 
@@ -125,4 +163,39 @@
     align-items: flex-start;
     margin: 0;
     padding: 0;
+}
+
+.c {
+    position: absolute;
+    top: 0px;
+    right: 300px;
+    z-index: 1;
+    max-width: 500px;
+    max-height: 500px;
+    width: 400px;
+    height: 400px;
+    cursor: pointer;
+    will-change: transform, opacity;
+}
+
+.front,
+.back {
+    background-size: cover;
+}
+
+.back {
+    border-radius: 50%;
+    background-image: url("https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.6435-9/141996875_2759192757654959_397413580388335564_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=92HbXtsFxDYAX-Rhx99&_nc_ht=scontent.fbkk10-1.fna&oh=87c6d410acd5e0c24551b632f44d7595&oe=60BD3FA8");
+}
+
+.front {
+    border-radius: 50%;
+    background-image: url("https://scontent.fbkk14-1.fna.fbcdn.net/v/t1.6435-9/29366140_2009700479270861_2222283591541325824_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=174925&_nc_ohc=dodxXox26JQAX-us-pu&_nc_ht=scontent.fbkk14-1.fna&oh=d7e6a7210b42dd9071bcd0934f627d4a&oe=60BBB921");
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
 }

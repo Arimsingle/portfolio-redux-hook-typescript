@@ -1,5 +1,9 @@
 @import '../shared/shared';
 
+* {
+    font-family: Rubik;
+}
+
 .navbar {
     display: flex;
     flex-direction: row;
@@ -99,15 +103,65 @@
 
         }
 
-        .dart {
-            fill: map-get($colors, dart);
-            transition: all .5s ease-in;
+        .dart_theme {
+            fill: map-get($colors, orange-dart);
+            transition: all .2s ease-in;
+            animation: ratationSun .3s ease-out alternate;
+
+            &:hover {
+                transform: scale(1.1);
+                fill: map-get($colors, orange-dart);
+
+                @keyframes ratationSun {
+                    0% {
+                        opacity: 0;
+                        transform: rotate(0deg);
+                        transition: transform .1s ease-out;
+
+                    }
+
+                    70% {
+                        transform: rotate(-390deg);
+                        transition: transform .1s ease-out;
+                    }
+
+                    100% {
+                        opacity: 1;
+                        transform: rotate(-360deg);
+                        transition: transform .1s ease-out;
+                    }
+                }
+            }
         }
 
-        .white {
+        .soft_theme {
             fill: map-get($colors, orange-soft);
-            transition: all .5s ease-out;
+            transition: all .2s ease-out;
+            animation: ratationMoon .3s ease-out alternate;
 
+            &:hover {
+                transform: scale(1.1);
+                fill: map-get($colors, orange-dart);
+
+                @keyframes ratationMoon {
+                    0% {
+                        opacity: 0;
+                        transform: rotate(0deg);
+                        transition: transform .2s ease-out;
+
+                    }
+
+                    70% {
+                        transform: rotate(-390deg);
+                        transition: transform .2s ease-out;
+                    }
+
+                    100% {
+                        opacity: 1;
+                        transform: rotate(-360deg);
+                    }
+                }
+            }
         }
 
 

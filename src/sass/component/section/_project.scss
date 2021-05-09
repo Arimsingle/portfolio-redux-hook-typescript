@@ -1,0 +1,24 @@
+@import '../shared/shared';
+
+.project {
+    &__header {
+        margin: 0;
+        text-align: center;
+        font-weight: bold;
+        font-size: 5rem;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .card {
+            width: 300px;
+            height: 300px;
+            border-radius: 8px;
+            background-color: map-get($colors, orange-dart);
+        }
+    }
+
+}

@@ -1,23 +1,24 @@
 @import '../shared/shared';
 
 
-section {
-    box-sizing: border-box;
-    padding: 1.875rem;
-}
 
 .text {
     text-align: center;
+    position: relative;
+    z-index: 1;
 
     &__header {
+
         font-size: 3.125rem;
         font-weight: normal;
         line-height: 1.5rem;
         color: map-get($colors, orange-dart);
+
     }
 
     &__highlight {
         color: map-get($colors, orange-dart);
+
     }
 }
 
@@ -31,7 +32,8 @@ section {
 
     &__header {
         position: relative;
-        top: -9.375rem;
+        display: block;
+        top: -7.375rem;
         width: 37.5rem;
         height: 37.5rem;
     }
@@ -101,12 +103,43 @@ section {
         z-index: 1;
         left: 430px; //-170
         top: -650px; //-342.26
-        transition: all .1s ease-in, all .2s ease-in;
+        transform: rotate(0);
+        transform: scale(1);
+        transition: all .2s ease-in;
+
 
         &:hover {
             transform: scale(1.1);
             transform: rotate(36.84deg);
+            transition: all .2s ease-in;
+            cursor: pointer;
+        }
+    }
 
+    &__smail.active {
+        animation: appear .3s ease-in alternate;
+
+        @keyframes appear {
+            0% {
+                opacity: 0;
+                transform: scale(.8);
+                transition: opacity .3s ease-in, transform .3s ease-in;
+
+            }
+
+            70% {
+                opacity: .5;
+                transform: scale(1.1);
+                transition: opacity .3s ease-in, transform .3s ease-in;
+
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+                transition: opacity .3s ease-in, transform .3s ease-in;
+
+            }
         }
     }
 
@@ -120,6 +153,35 @@ section {
         &:hover {
             transform: scale(1.1);
             transform: rotate(-22.42deg);
+            cursor: pointer;
+
+        }
+    }
+
+    &__xSmail.active {
+        animation: appear .3s ease-in alternate;
+
+        @keyframes appear {
+            0% {
+                opacity: 0;
+                transform: scale(.8);
+                transition: opacity .3s ease-in, transform .3s ease-in;
+
+            }
+
+            70% {
+                opacity: .5;
+                transform: scale(1.1);
+                transition: opacity .3s ease-in, transform .3s ease-in;
+
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+                transition: opacity .3s ease-in, transform .3s ease-in;
+
+            }
         }
     }
 
@@ -132,20 +194,78 @@ section {
 
         &:hover {
             transform: scale(1.1);
+            cursor: pointer;
+
         }
 
+    }
+
+    &__shy.active {
+        animation: appear .3s ease-in alternate;
+
+        @keyframes appear {
+            0% {
+                opacity: 0;
+                transform: scale(.8);
+                transition: opacity .3s ease-in, transform .3s ease-in;
+
+            }
+
+            70% {
+                opacity: .5;
+                transform: scale(1.1);
+                transition: opacity .3s ease-in, transform .3s ease-in;
+
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+                transition: opacity .3s ease-in, transform .3s ease-in;
+
+            }
+        }
     }
 
     &__glass {
         position: absolute;
         width: 130px;
         height: 130px;
-        left: 1200.64px;
+        left: 1300.64px;
         top: -650px;
         transition: all .1s ease-in;
 
         &:hover {
             transform: scale(1.1);
+            cursor: pointer;
+
+        }
+    }
+
+    &__glass.active {
+        animation: appear .3s ease-in alternate;
+
+        @keyframes appear {
+            0% {
+                opacity: 0;
+                transform: scale(.8);
+                transition: opacity .3s ease-in, transform .3s ease-in;
+
+            }
+
+            70% {
+                opacity: .5;
+                transform: scale(1.1);
+                transition: opacity .3s ease-in, transform .3s ease-in;
+
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+                transition: opacity .3s ease-in, transform .3s ease-in;
+
+            }
         }
     }
 
@@ -159,6 +279,37 @@ section {
 
         &:hover {
             transform: scale(1.1);
+            cursor: pointer;
+
+        }
+    }
+
+    &__kiss {
+        .active {
+            animation: appear .3s ease-in alternate;
+
+            @keyframes appear {
+                0% {
+                    opacity: 0;
+                    transform: scale(.8);
+                    transition: opacity .3s ease-in, transform .3s ease-in;
+
+                }
+
+                70% {
+                    opacity: .5;
+                    transform: scale(1.1);
+                    transition: opacity .3s ease-in, transform .3s ease-in;
+
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: scale(1);
+                    transition: opacity .3s ease-in, transform .3s ease-in;
+
+                }
+            }
         }
     }
 
@@ -170,6 +321,35 @@ section {
 
         &:hover {
             transform: scale(1.1);
+            cursor: pointer;
+
+        }
+    }
+
+    &__xxSmail.active {
+        animation: appear .3s ease-in alternate;
+
+        @keyframes appear {
+            0% {
+                opacity: 0;
+                transform: scale(.8);
+                transition: opacity .3s ease-in, transform .3s ease-in;
+
+            }
+
+            70% {
+                opacity: .5;
+                transform: scale(1.1);
+                transition: opacity .3s ease-in, transform .3s ease-in;
+
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+                transition: opacity .3s ease-in, transform .3s ease-in;
+
+            }
         }
     }
 

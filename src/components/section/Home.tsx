@@ -1,11 +1,10 @@
 import { useSelector } from "react-redux";
-import { AppState } from "../../redux/store";
-import { svgArray } from "./variables";
-import { svgStyles } from "./variables";
-const Home = () => {
-  const toggleTheme = useSelector((state: AppState) => state.theme);
+import { stateReduxType } from "../../redux/store";
+import Emoji from "../emoji/Emoji";
+const Home: React.FC = () => {
+  const toggleTheme = useSelector((state: stateReduxType) => state.theme);
   return (
-    <>
+    <div style={{ marginTop: "60px" }}>
       <div className="text">
         <h1
           className="text__header"
@@ -17,26 +16,23 @@ const Home = () => {
           className="text__header"
           style={toggleTheme ? { color: "#121212" } : { color: "#fbf1c7" }}
         >
-          Fullstack Deverloper <span className="text__highlight">シ</span>.
+          Fullstack Deverloper <span className="text__highlight">シ.</span>
         </h1>
       </div>
       <div className="photo">
-        <img src="images/programer.png" className="photo__header" />
+        <img
+          src="images/programer.png"
+          className="photo__header"
+          alt="programer"
+        />
         <span
           className={toggleTheme ? "photo__scroll_dart" : "photo__scroll"}
         ></span>
       </div>
       <div className="emoji">
-        {svgArray &&
-          svgArray.map((path, index) => (
-            <img
-              key={index}
-              className={svgStyles[index]}
-              src={`images/emojis/${path}.svg`}
-            />
-          ))}
+        <Emoji />
       </div>
-    </>
+    </div>
   );
 };
 export default Home;
