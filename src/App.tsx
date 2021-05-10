@@ -4,9 +4,12 @@ import About from "./components/section/About";
 import Project from "./components/section/Project";
 import Blog from "./components/section/Blog";
 import Skill from "./components/section/Skill";
+import Experience from "./components/section/Experience";
 import { useSelector } from "react-redux";
 import { stateReduxType } from "./redux/store";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 const App: React.FC = () => {
   const handleThemeChanged = () => (toggleTheme ? "white-mode" : "dart-mode");
   const toggleTheme = useSelector((state: stateReduxType) => state.theme);
@@ -20,6 +23,9 @@ const App: React.FC = () => {
       </section>
       <section className={handleThemeChanged()}>
         <About />
+      </section>
+      <section className={handleThemeChanged()}>
+        <Experience />
       </section>
       <section className={handleThemeChanged()}>
         <Project />

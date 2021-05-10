@@ -1,3 +1,4 @@
+// import from Emoji component
 export const svgVariables: string[] = [
   "Emoji 3",
   "Emoji 8",
@@ -21,4 +22,76 @@ export const svgStyles: string[] = [
   "emoji__glass",
   "emoji__kiss",
   "emoji__xxSmail",
+];
+
+// import from Experience component
+export const Languages: string[] = [
+  "JavaScript",
+  "TypeScript",
+  "Solidity",
+  "C/C++",
+  "Python",
+  "Dart",
+  "CSS/SCSS",
+];
+export const Tools_Libraries: string[] = [
+  "React",
+  "React Native",
+  "Next",
+  "Node",
+  "Express",
+  "Web3",
+  "Nest",
+  "REST API",
+  "GraphQL",
+  "Redux",
+  "Geth",
+  "Truffle",
+  "Genache",
+  "infura",
+];
+export const Databases: string[] = [
+  "Firebase",
+  "MongoDB",
+  "MySQL",
+  "Blockchain/Ethereum",
+];
+
+// import from Project component
+export const toolsSmartPolice: string[] = [
+  "Next.js",
+  "Node.js",
+  "Web3.js",
+  "Face-api.js",
+  "Solidity",
+  "Geth",
+  "Truffle",
+  "IPFS",
+];
+export const toolsCovidNineTeen: string[] = [
+  "React.js",
+  "Tensorflow.js",
+  "Firebase",
+  "Redux",
+];
+export const toolsFaceDecrypt: string[] = [
+  "Next.js",
+  "Tensorflow.js",
+  "Face-api.js",
+];
+export const toolsObjDetection: string[] = ["OpenCV", "Line notify"];
+export const toolsBackPink: string[] = ["React Native", "Redux"];
+
+//export to project component
+export const tagsColor: string[] = [
+  "magenta",
+  "red",
+  "volcano",
+  "orange",
+  "gold",
+  "lime",
+  "cyan",
+  "blue",
+  "geekblue",
+  "purple",
 ];

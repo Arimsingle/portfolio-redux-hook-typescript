@@ -6,6 +6,12 @@
         text-align: center;
         font-weight: bold;
         font-size: 5rem;
+
+        .text__highlight {
+            background: linear-gradient(90deg, rgba(255, 111, 0, 1) 52%, rgba(255, 145, 0, 1) 100%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     }
 
     &__content {
@@ -14,11 +20,135 @@
         justify-content: center;
 
         .card {
+            position: relative;
             width: 300px;
-            height: 300px;
-            border-radius: 8px;
-            background-color: map-get($colors, orange-dart);
+            height: 430px;
+            line-height: 22px;
+            border-radius: 3px;
+            box-shadow: 0 0 13px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            background: map-get($colors, xwhite);
+
+            &__overlay {
+                background: map-get($colors, dart);
+                overflow: hidden;
+
+                .card__background {
+                    object-fit: cover;
+                    opacity: 1;
+                    height: 200px;
+                    width: 100%;
+                    box-shadow: 0 0 13px rgba(0, 0, 0, 0.1);
+                    border-radius: 5px 5px 0 0;
+                    transition: all.3s;
+
+                    &:hover {
+                        opacity: 0.1;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            &__container {
+                position: relative;
+
+                padding: 1rem 1rem;
+
+                .card__title {
+                    user-select: none;
+                    text-align: center;
+                    position: relative;
+                    top: -130px;
+                    font-size: 2rem;
+                    color: map-get($colors, orange-soft);
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                .card__content {
+                    .card__descriptionTitle {
+                        position: absolute;
+                        top: 10px;
+                        font-size: 1.25rem;
+                    }
+
+                    .tag {
+                        position: absolute;
+                        top: -30px;
+
+
+                    }
+
+                    p.card__description {
+                        position: relative;
+                        top: -30px;
+                        font-size: 15px;
+                        display: flex;
+                        align-items: center;
+                        color: #999999;
+
+                        // padding: 10px;
+                        &:hover {
+                            cursor: auto;
+                        }
+                    }
+
+                    .card__tools {
+                        padding: 0;
+                        margin: 0;
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: center;
+                        flex-wrap: wrap;
+
+                        & li {
+
+                            margin: .1rem;
+                            line-height: 1.125rem;
+
+                            span.tag_child {
+                                font-size: 10px;
+                            }
+
+                            span {
+                                padding: 0;
+                                margin: 0;
+                            }
+
+                            &:hover {
+                                cursor: default;
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+
+
+            }
+
+
+
+            &:hover {
+                transform: translateY(-7px);
+                -webkit-box-shadow: 1px 4px 15px 2px rgba(0, 0, 0, 0.15);
+                box-shadow: 1px 4px 15px 2px rgba(0, 0, 0, 0.15);
+            }
+
+            ul>li {
+                list-style: none;
+            }
+
+
+
+
         }
+
     }
 
 }

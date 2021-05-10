@@ -5,6 +5,7 @@
 @import 'component/section/project';
 @import 'component/section/skill';
 @import 'component/section/blog';
+@import 'component/section/experience';
 
 body {
     margin: 0;
@@ -14,6 +15,8 @@ body {
     -moz-osx-font-smoothing: grayscale;
     // background-color: $color-white;
     box-sizing: border-box;
+    
+
 }
 
 .white-mode {

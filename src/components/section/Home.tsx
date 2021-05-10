@@ -5,16 +5,23 @@ const Home: React.FC = () => {
   const toggleTheme = useSelector((state: stateReduxType) => state.theme);
   return (
     <div style={{ marginTop: "60px" }}>
-      <div className="text">
+      <div
+        className="text"
+        data-aos="fade-down"
+        data-aos-delay="300"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+      >
         <h1
           className="text__header"
-          style={toggleTheme ? { color: "#121212" } : { color: "#fbf1c7" }}
+          style={toggleTheme ? { color: "#293241" } : { color: "#fbf1c7" }}
         >
           <span className="text__highlight">Hi,</span> My name is Arim
         </h1>
         <h1
           className="text__header"
-          style={toggleTheme ? { color: "#121212" } : { color: "#fbf1c7" }}
+          style={toggleTheme ? { color: "#293241" } : { color: "#fbf1c7" }}
         >
           Fullstack Deverloper <span className="text__highlight">シ.</span>
         </h1>
@@ -24,8 +31,17 @@ const Home: React.FC = () => {
           src="images/programer.png"
           className="photo__header"
           alt="programer"
+          data-aos="zoom-in-up"
+          data-aos-delay="150"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-anchor-placement="top-bottom"
         />
         <span
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="300"
           className={toggleTheme ? "photo__scroll_dart" : "photo__scroll"}
         ></span>
       </div>

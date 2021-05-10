@@ -9,16 +9,16 @@ import { RiCommunityLine, RiHotelLine } from "react-icons/ri";
 import { Popover } from "antd";
 import { useState } from "react";
 import { useSpring, a } from "@react-spring/web";
+
 const About: React.FC = () => {
   const toggleTheme = useSelector((state: stateReduxType) => state.theme);
-  // const [swapProfile, setSwapProfile] = useState(false);
-  const [flipped, set] = useState(false);
+  const [flipped, setFlipped] = useState(false);
   const { transform, opacity } = useSpring({
     opacity: flipped ? 1 : 0,
     transform: `perspective(600px) rotate(${flipped ? 180 : 0}deg)`,
     config: { mass: 5, tension: 500, friction: 80 },
   });
-  const content = (
+  const contentHover = (
     <div style={{ display: "flex", justifyContent: "space-around" }}>
       <p>Yes😂</p>
       <p>Yes😂</p>
@@ -29,45 +29,86 @@ const About: React.FC = () => {
     <div className="about">
       <h1
         className="about__header"
-        style={toggleTheme ? { color: "#121212" } : { color: "#fbf1c7" }}
+        data-aos="fade-down"
+        data-aos-delay="100"
+        data-aos-duration="1000"
       >
         <span className="text__highlight">ABOUT ME</span>
       </h1>
       <div className="about__content" style={{ marginTop: "100px" }}>
         <div className="about__content__left">
           <p
-            style={toggleTheme ? { color: "#121212" } : { color: "#fbf1c7" }}
-            className="prosernal"
+            className={
+              toggleTheme
+                ? "prosernal soft_theme_textnothover"
+                : "prosernal dart_theme_textnothover"
+            }
+            data-aos="zoom-in-right"
+            data-aos-delay="100"
+            data-aos-duration="1000"
           >
-            Extremely motivated to constantly develop my skills
-            <br />
-            and knowledge in work. I'm ready to learn new things.
-            <br />
-            I'm Full-Stack Developer. I would like to get the opportunity to
-            learn and develop my skills better.
-            <Popover title="Can I join your team/family?" content={content}>
-              <span className="icon_notebook" style={{marginLeft:"10px"}}>👨🏿‍💻</span>
+            Extremely motivated to constantly develop my skills and knowledge in
+            work. I'm ready to learn new things. I'm Full-Stack Developer. I
+            would like to get the opportunity to learn and develop my skills
+            better.
+            <Popover
+              title="Can I join your team/family?"
+              content={contentHover}
+            >
+              <span
+                className="icon_notebook"
+                style={{ marginLeft: "10px" }}
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                👨🏿‍💻
+              </span>
             </Popover>
           </p>
           <div>
             <ul>
-              <li className={toggleTheme ? "soft_theme" : "dart_theme"}>
+              <li
+                className={toggleTheme ? "soft_theme" : "dart_theme"}
+                data-aos="fade-up"
+                data-aos-delay="100"
+                data-aos-duration="1000"
+              >
                 <FiUser className="icon" />
                 <span>Mr.Arim Cheberahim</span>
               </li>
-              <li className={toggleTheme ? "soft_theme" : "dart_theme"}>
+              <li
+                className={toggleTheme ? "soft_theme" : "dart_theme"}
+                data-aos="fade-up"
+                data-aos-delay="200"
+                data-aos-duration="1000"
+              >
                 <FiPhone className="icon" />
                 <span>0936783698</span>
               </li>
-              <li className={toggleTheme ? "soft_theme" : "dart_theme"}>
+              <li
+                className={toggleTheme ? "soft_theme" : "dart_theme"}
+                data-aos="fade-up"
+                data-aos-delay="300"
+                data-aos-duration="1000"
+              >
                 <FiMail className="icon" />
                 <span>arim.alif@gmail.com</span>
               </li>
-              <li className={toggleTheme ? "soft_theme" : "dart_theme"}>
+              <li
+                className={toggleTheme ? "soft_theme" : "dart_theme"}
+                data-aos="fade-up"
+                data-aos-delay="400"
+                data-aos-duration="1000"
+              >
                 <RiHotelLine className="icon" />
                 <span>Prince of songkla university phuket campus</span>
               </li>
-              <li className={toggleTheme ? "soft_theme" : "dart_theme"}>
+              <li
+                className={toggleTheme ? "soft_theme" : "dart_theme"}
+                data-aos="fade-up"
+                data-aos-delay="500"
+                data-aos-duration="1000"
+              >
                 <RiCommunityLine className="icon" />
                 <span>208 M.5 Muno-Sungaikolok, Narathiwak 96120</span>
               </li>
@@ -78,6 +119,9 @@ const About: React.FC = () => {
                   href="https://github.com/Arimsingle"
                   target="_blank"
                   rel="noreferrer"
+                  data-aos="zoom-in"
+                  data-aos-delay="700"
+                  data-aos-duration="1000"
                 >
                   <UseAnimations
                     animation={github}
@@ -93,6 +137,9 @@ const About: React.FC = () => {
                   href="https://github.com/Arimsingle"
                   target="_blank"
                   rel="noreferrer"
+                  data-aos="zoom-in"
+                  data-aos-delay="800"
+                  data-aos-duration="1000"
                 >
                   <UseAnimations
                     animation={twitter}
@@ -109,6 +156,9 @@ const About: React.FC = () => {
                   href="https://www.facebook.com/arim.mn.10/"
                   target="_blank"
                   rel="noreferrer"
+                  data-aos="zoom-in"
+                  data-aos-delay="900"
+                  data-aos-duration="1000"
                 >
                   <UseAnimations
                     animation={facebook}
@@ -123,13 +173,13 @@ const About: React.FC = () => {
           </div>
         </div>
         <div className="about__content__right">
-          <div onClick={() => set((state) => !state)}>
+          <div onClick={() => setFlipped((state) => !state)}>
             <a.div
-              className={`c back`}
+              className="control back"
               style={{ opacity: opacity.to((o) => 1 - o), transform }}
             />
             <a.div
-              className={`c front`}
+              className="control front"
               style={{
                 opacity,
                 transform,
@@ -137,24 +187,12 @@ const About: React.FC = () => {
               }}
             />
           </div>
-          {/* {swapProfile ? (
-            <img
-              src="images/me2.jpg"
-              style={{ width: "400px" }}
-              className="profile"
-              alt="profile"
-              onClick={() => setSwapProfile(!swapProfile)}
-            />
-          ) : (
-            <img
-              src="images/me.jpg"
-              style={{ width: "400px" }}
-              className="profile2"
-              alt="profile2"
-              onClick={() => setSwapProfile(!swapProfile)}
-            />
-          )} */}
-          <span className="ciecle"></span>
+          <span
+            className="ciecle"
+            data-aos="fade-left"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+          ></span>
         </div>
       </div>
     </div>

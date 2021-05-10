@@ -7,9 +7,8 @@ const Blog = () => {
     <div className="blog">
       <h1
         className="blog__header"
-        style={toggleTheme ? { color: "#121212" } : { color: "#fbf1c7" }}
       >
-        <span className="text_highlight">MY BLOG</span>
+        <span className="text__highlight">MY BLOG</span>
       </h1>
     </div>
   );

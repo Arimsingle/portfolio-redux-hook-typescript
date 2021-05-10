@@ -6,6 +6,12 @@
         text-align: center;
         font-weight: bold;
         font-size: 5rem;
+
+        .text__highlight {
+            background: linear-gradient(90deg, rgba(255, 111, 0, 1) 52%, rgba(255, 145, 0, 1) 100%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     }
 
     &__content {
@@ -51,13 +57,18 @@
                 width: 430px;
                 height: 430px;
                 border-radius: 50%;
-                background-color: map-get($colors, orange-dart);
+                box-shadow: 0 0 13px rgba(0, 0, 0, 0.1);
+                // background-color: map-get($colors, orange-dart);
+
+                background: rgb(255, 111, 0);
+                background: linear-gradient(90deg, rgba(255, 111, 0, 1) 52%, rgba(255, 145, 0, 1) 100%);
             }
+
         }
 
 
         p {
-            font-size: 1.875rem;
+            font-size: 2.3rem;
             width: 50rem;
         }
 
@@ -104,10 +115,11 @@
             }
 
 
-            ul li {
+            ul>li {
                 font-size: 1.5625rem;
                 display: flex;
                 align-items: center;
+                line-height: 2rem;
 
                 .icon {
                     margin-right: 0.625rem;
@@ -116,22 +128,43 @@
 
             }
 
+            //prosernal
+            .dart_theme_textnothover {
+                transition: all 1s ease-in-out;
+                color: map-get($colors, orange-soft);
+            }
+
+            .soft_theme_textnothover {
+                transition: all 1s ease-in-out;
+                color: map-get($colors, dart);
+            }
+
+
+
+
+
+
+
             .dart_theme {
+                transition: color .3s ease-in-out, transform .3s ease-in-out;
                 color: map-get($colors, orange-medium);
             }
 
             .dart_theme:hover {
                 color: map-get($colors, orange-soft);
+                transform: scale(1.03);
                 cursor: default;
 
             }
 
             .soft_theme {
-                color: map-get($colors, orange-medium);
+                transition: color .3s ease-in-out, transform .3s ease-in-out;
+                color: map-get($colors, dart);
             }
 
             .soft_theme:hover {
-                color: map-get($colors, dart);
+                color: map-get($colors, orange-medium);
+                transform: scale(1.03);
                 cursor: default;
 
             }
@@ -165,7 +198,7 @@
     padding: 0;
 }
 
-.c {
+.control {
     position: absolute;
     top: 0px;
     right: 300px;
@@ -181,6 +214,7 @@
 .front,
 .back {
     background-size: cover;
+    box-shadow: 0 0 13px rgba(0, 0, 0, 0.1);
 }
 
 .back {
