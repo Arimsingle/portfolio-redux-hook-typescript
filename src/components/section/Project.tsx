@@ -152,18 +152,13 @@ const Project: React.FC = () => {
           <Col xs={24} sm={12} md={8} lg={6}>
             <div className="card">
               <div className="card__overlay">
-                <img
-                  src="images/detect.png"
-                  className="card__background"
-                />
+                <img src="images/detect.png" className="card__background" />
               </div>
               <div className="card__container">
                 <p className="card__title">Detect Orange</p>
                 <div className="card__content">
                   <p className="card__descriptionTitle">Desktop Application</p>
-                  {/* <span className="tag">
-                    <Tag color="orange">#Responsive</Tag>
-                  </span> */}
+
                   <p className="card__description">
                     เป็นโปรเจคที่นำเทคโนโลยี่ Blockchain กับ Deep learning
                     มายกระดับการปฏิบัติหน้าของเจ้าหน้าที่ตำรวจ
@@ -191,6 +186,9 @@ const Project: React.FC = () => {
           </Col>
         </Row>
       </div>
+        <div>
+          <img src="images/robot-programer.png" />
+        </div>
     </div>
   );
 };

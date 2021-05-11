@@ -139,6 +139,9 @@ const Experience = () => {
           </Timeline.Item>
         </Timeline>
       </div>
+      <div >
+        <img src="images/goal.png" className="png-goal"/>
+      </div>
     </div>
   );
 };
