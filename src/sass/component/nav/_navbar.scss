@@ -1,4 +1,4 @@
-@import '../shared/shared';
+@import "../shared/shared";
 
 * {
     font-family: Rubik;
@@ -12,19 +12,23 @@
     box-sizing: border-box;
 
     &__list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
         ul {
             display: flex;
             padding: 0;
+            margin: 0;
         }
 
-        ul>li {
+        ul > li {
             display: flex;
             align-items: center;
             justify-content: center;
             list-style: none;
             font-size: 1.125rem;
             box-sizing: border-box;
-
 
             &:not(:last-child) {
                 margin-right: 1.625rem;
@@ -38,20 +42,20 @@
                 position: relative;
 
                 &::before {
-                    content: '';
+                    content: "";
                     position: absolute;
                     width: 0rem;
-                    border-radius: .625rem;
-                    transition: width .2s ease-out;
+                    border-radius: 0.625rem;
+                    transition: width 0.2s ease-out;
                 }
 
                 &:hover::before {
-                    content: '';
+                    content: "";
                     position: absolute;
-                    bottom: -.5rem;
-                    height: .25rem;
+                    bottom: -0.5rem;
+                    height: 0.25rem;
                     width: 3.3125rem;
-                    border-radius: .625rem;
+                    border-radius: 0.625rem;
                     background-color: map-get($colors, orange-dart);
                 }
             }
@@ -61,7 +65,7 @@
     &__logo {
         .logo {
             font-size: 2rem;
-            transition: transform .2s linear;
+            transition: transform 0.2s linear;
             color: map-get($colors, orange-dart);
         }
 
@@ -74,7 +78,7 @@
         svg {
             width: 1.5rem;
             height: 1.5rem;
-            transition: transform .4s linear;
+            transition: transform 0.4s linear;
 
             &.active {
                 background-color: map-get($colors, orange-dart);
@@ -82,7 +86,6 @@
 
             &.not-active {
                 background-color: map-get($colors, orange-soft);
-
             }
         }
     }
@@ -100,13 +103,12 @@
         svg {
             width: 1.5rem;
             height: 1.5rem;
-
         }
 
         .dart_theme {
             fill: map-get($colors, orange-dart);
-            transition: all .2s ease-in;
-            animation: ratationSun .4s ease-out alternate;
+            transition: all 0.2s ease-in;
+            animation: ratationSun 0.4s ease-out alternate;
 
             &:hover {
                 transform: scale(1.1);
@@ -117,19 +119,18 @@
                     0% {
                         opacity: 0;
                         transform: rotate(0deg);
-                        transition: transform .1s ease-out;
-
+                        transition: transform 0.1s ease-out;
                     }
 
                     70% {
                         transform: rotate(-390deg);
-                        transition: transform .1s ease-out;
+                        transition: transform 0.1s ease-out;
                     }
 
                     100% {
                         opacity: 1;
                         transform: rotate(-360deg);
-                        transition: transform .1s ease-out;
+                        transition: transform 0.1s ease-out;
                     }
                 }
             }
@@ -137,8 +138,8 @@
 
         .soft_theme {
             fill: map-get($colors, orange-soft);
-            transition: all .2s ease-out;
-            animation: ratationMoon .4s ease-out alternate;
+            transition: all 0.2s ease-out;
+            animation: ratationMoon 0.4s ease-out alternate;
 
             &:hover {
                 transform: scale(1.1);
@@ -149,13 +150,12 @@
                     0% {
                         opacity: 0;
                         transform: rotate(0deg);
-                        transition: transform .2s ease-out;
-
+                        transition: transform 0.2s ease-out;
                     }
 
                     70% {
                         transform: rotate(-390deg);
-                        transition: transform .2s ease-out;
+                        transition: transform 0.2s ease-out;
                     }
 
                     100% {
@@ -165,8 +165,6 @@
                 }
             }
         }
-
-
     }
 
     &__button {
@@ -177,7 +175,7 @@
         box-sizing: border-box;
         border-radius: 0.5rem;
         background-color: map-get($colors, orange-soft);
-        font-family: 'Rubik', sans-serif;
+        font-family: "Rubik", sans-serif;
         font-weight: 500;
         font-size: 1rem;
 
@@ -186,4 +184,21 @@
         }
     }
 
+    @include breakpoint-down(md) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        &__list,
+        &__button,
+        svg.dart_theme,
+        svg.soft_theme {
+            display: none;
+        }
+    }
+    @include breakpoint-up(md) {
+        &__burger {
+            display: none;
+        }
+    }
 }

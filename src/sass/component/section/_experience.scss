@@ -1,13 +1,12 @@
-@import '../shared/shared';
+@import "../shared/shared";
 
 .experiences {
     position: relative;
-
-    &__experiences,
-    &__education {
-        width: 80%;
+    box-sizing: border-box;
+    &__education,
+    &__experiences {
         height: auto;
-
+        margin: 0;
         h1 {
             text-align: center;
             font-size: 50px;
@@ -15,18 +14,138 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
+        @include breakpoint-down(sm) {
+            h1 {
+                font-size: 32px;
+            }
+            p {
+                font-size: 18px;
+            }
+            .decription {
+                font-size: 16px;
+            }
+            .timeline-container {
+                padding-right: 50px;
+            }
+        }
+        @include breakpoint-up(sm) {
+            h1 {
+                font-size: 32px;
+            }
+            p {
+                font-size: 18px;
+            }
+            .decription {
+                padding-right: 50px;
+                font-size: 16px;
+            }
+            .timeline-container {
+                padding-right: 100px;
+            }
+        }
+        @include breakpoint-up(md) {
+            h1 {
+                font-size: 32px;
+            }
+            p {
+                font-size: 20px;
+            }
+            .decription {
+                padding-right: 50px;
+                font-size: 18px;
+            }
+            .timeline-container {
+                padding-right: 100px;
+            }
+        }
+        @include breakpoint-up(lg) {
+            h1 {
+                font-size: 40px;
+            }
+            p {
+                font-size: 25px;
+            }
+            .decription {
+                padding-right: 50px;
+                font-size: 23px;
+            }
+            .timeline-container {
+                padding-right: 100px;
+            }
+        }
     }
     .png-goal {
         position: absolute;
         margin-top: 300px;
         top: 0;
-        right: 0;
+        right: 250px;
+        z-index: 1;
     }
-
-
+    .png-bg-goal {
+        position: absolute;
+        margin-top: 300px;
+        top: 150px;
+        right: 150px;
+        width: 500px;
+    }
+    @include breakpoint-down(sm) {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        .png-goal-container {
+            display: block;
+            .png-goal {
+                width: 250px;
+                margin: 0;
+                position: static;
+            }
+        }
+        &__education {
+            .timeline {
+                text-align: center;
+            }
+        }
+    }
+    @include breakpoint-up(sm) {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        .png-goal-container {
+            display: block;
+            .png-goal {
+                width: 250px;
+                margin: 0;
+                position: static;
+            }
+        }
+        &__education {
+            .timeline {
+                text-align: center;
+            }
+        }
+    }
+    @include breakpoint-up(lg) {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        .png-goal-container {
+            display: block;
+            .png-goal {
+                width: 300px;
+                margin: 0;
+                position: static;
+            }
+        }
+        &__education {
+            .timeline {
+                text-align: center;
+            }
+        }
+    }
 }
-
 
 p {
     font-size: 1.5rem;
@@ -39,7 +158,6 @@ p {
 .dart_theme:hover {
     color: map-get($colors, orange-soft);
     cursor: default;
-
 }
 
 .soft_theme {
@@ -49,5 +167,4 @@ p {
 .soft_theme:hover {
     color: map-get($colors, orange-medium);
     cursor: default;
-
 }

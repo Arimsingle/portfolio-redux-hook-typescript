@@ -35,7 +35,7 @@ const About: React.FC = () => {
       >
         <span className="text__highlight">ABOUT ME</span>
       </h1>
-      <div className="about__content" style={{ marginTop: "100px" }}>
+      <div className="about__content" >
         <div className="about__content__left">
           <p
             className={
@@ -43,12 +43,13 @@ const About: React.FC = () => {
                 ? "prosernal soft_theme_textnothover"
                 : "prosernal dart_theme_textnothover"
             }
-            data-aos="zoom-in-right"
+            data-aos="fade-up"
             data-aos-delay="100"
             data-aos-duration="1000"
           >
             Extremely motivated to constantly develop my skills and knowledge in
-            work. I'm ready to learn new things. I'm Full-Stack Developer. I
+            work. I'm ready to learn new things.
+            I'm Full-Stack Developer. I
             would like to get the opportunity to learn and develop my skills
             better.
             <Popover
@@ -173,7 +174,14 @@ const About: React.FC = () => {
           </div>
         </div>
         <div className="about__content__right">
-          <div onClick={() => setFlipped((state) => !state)}>
+          <span
+            className="ciecle"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+          >
+          </span>
+          {/* <div onClick={() => setFlipped((state) => !state)}>
             <a.div
               className="control back"
               style={{ opacity: opacity.to((o) => 1 - o), transform }}
@@ -186,16 +194,10 @@ const About: React.FC = () => {
                 rotateX: "180deg",
               }}
             />
-          </div>
-          <span
-            className="ciecle"
-            data-aos="fade-left"
-            data-aos-delay="200"
-            data-aos-duration="1000"
-          ></span>
+          </div> */}
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 export default About;

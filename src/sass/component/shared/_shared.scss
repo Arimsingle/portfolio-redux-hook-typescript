@@ -1,14 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
-$color-gray:#121212;
-$color-purple:#5352ED;
-$color-white :#726c52;
-$color-dart :#121212;
-$color-orange:#fe8019;
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200&display=swap");
+$color-gray: #121212;
+$color-purple: #5352ed;
+$color-white: #726c52;
+$color-dart: #121212;
+$color-orange: #fe8019;
 
-$colors:(dart:#293241,
-    xxdart:#121212,
-    xwhite:#fff,
-    orange-soft:#fbf1c7,
-    orange-medium:#bbb288,
-    orange-dart:#ff6f00);
+$colors: (
+    dart: #293241,
+    xxdart: #121212,
+    xwhite: #fff,
+    orange-soft: #fbf1c7,
+    orange-medium: #bbb288,
+    orange-dart: #ff6f00,
+);
+$breakpoint-up: (
+    //min
+    sm: "36.288em",
+    md: "48.384em",
+    lg: "62.496em",
+    xl: "75.6em",
+    xxl: "100.8em"
+);
+$breakpoint-down: (
+    //max
+    sm: "36.225em",
+    md: "48.321em",
+    lg: "62.433em",
+    xl: "75.537em",
+    xxl: "100.737em"
+);
+
+// 320px — 480px: Mobile devices
+// 481px — 768px: iPads, Tablets
+// 769px — 1024px: Small screens, laptops
+// 1025px — 1200px: Desktops, large screens
+// 1201px and more —  Extra large screens, TV

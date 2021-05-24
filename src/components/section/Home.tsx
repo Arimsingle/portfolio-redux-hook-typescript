@@ -8,16 +8,16 @@ const Home: React.FC = () => {
       <div
         className="text"
         data-aos="fade-down"
-        data-aos-delay="300"
+        data-aos-delay="2000"
         data-aos-duration="1000"
-        data-aos-easing="ease-in-out"
-        data-aos-mirror="true"
+      // data-aos-easing="ease-in-out"
+      // data-aos-mirror="true"
       >
         <h1
           className="text__header"
           style={toggleTheme ? { color: "#293241" } : { color: "#fbf1c7" }}
         >
-          <span className="text__highlight">Hi,</span> My name is Arim
+          <span className="text__highlight" >Hi,</span> My name is Arim
         </h1>
         <h1
           className="text__header"
@@ -31,8 +31,8 @@ const Home: React.FC = () => {
           src="images/programer.png"
           className="photo__header"
           alt="programer"
-          data-aos="zoom-in-up"
-          data-aos-delay="150"
+          data-aos="fade-up"
+          data-aos-delay="2500"
           data-aos-duration="1000"
           data-aos-easing="ease-in-out"
           data-aos-mirror="true"
@@ -40,14 +40,14 @@ const Home: React.FC = () => {
         />
         <span
           data-aos="fade-up"
+          data-aos-delay="3000"
           data-aos-duration="1000"
-          data-aos-delay="300"
           className={toggleTheme ? "photo__scroll_dart" : "photo__scroll"}
         ></span>
       </div>
-      <div className="emoji">
+      {/* <div className="emoji">
         <Emoji />
-      </div>
+      </div> */}
     </div>
   );
 };

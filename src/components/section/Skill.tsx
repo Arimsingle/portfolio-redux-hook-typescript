@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { stateReduxType } from "../../redux/store";
 import { Languages, Tools_Libraries, Databases } from "../shared/variables";
+import { timeDelayLanguages, timeDelayTools_Libraries, timeDelayDatabases } from "../shared/variables";
 const Skill: React.FC = () => {
   const toggleTheme = useSelector((state: stateReduxType) => state.theme);
   return (
@@ -13,9 +14,7 @@ const Skill: React.FC = () => {
           <div className="manage_content">
             <div className="programings">
               <p className="programings__title">
-                {/* <span className="line-left"></span> */}
                 <span style={{ fontSize: "30px" }}>Languages</span>
-                {/* <span className="line-right"></span> */}
               </p>
               <ul>
                 <li
@@ -23,7 +22,10 @@ const Skill: React.FC = () => {
                 >
                   {Languages.map((Language, index) => {
                     return (
-                      <p className="list__language" key={index}>
+                      <p className="list__language" key={index}
+                        data-aos="fade-up"
+                        data-aos-delay={timeDelayLanguages[index]}
+                        data-aos-duration="1000">
                         #{Language}
                       </p>
                     );
@@ -41,7 +43,10 @@ const Skill: React.FC = () => {
                 >
                   {Tools_Libraries.map((Tools_Library, index) => {
                     return (
-                      <p className="list__language" key={index}>
+                      <p className="list__language" key={index}
+                        data-aos="fade-up"
+                        data-aos-delay={timeDelayTools_Libraries[index]}
+                        data-aos-duration="1000">
                         #{Tools_Library}
                       </p>
                     );
@@ -59,7 +64,10 @@ const Skill: React.FC = () => {
                 >
                   {Databases.map((Database, index) => {
                     return (
-                      <p className="list__language" key={index}>
+                      <p className="list__language" key={index}
+                        data-aos="fade-up"
+                        data-aos-delay={timeDelayDatabases[index]}
+                        data-aos-duration="1000">
                         #{Database}
                       </p>
                     );

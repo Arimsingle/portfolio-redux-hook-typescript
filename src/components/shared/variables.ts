@@ -95,3 +95,36 @@ export const tagsColor: string[] = [
   "geekblue",
   "purple",
 ];
+
+//export to skill component
+export const timeDelayLanguages: string[] = [
+  "100",
+  "300",
+  "500",
+  "700",
+  "900",
+  "1100",
+  "1300",
+];
+export const timeDelayTools_Libraries: string[] = [
+  "100",
+  "300",
+  "500",
+  "700",
+  "900",
+  "1100",
+  "1300",
+  "1500",
+  "1700",
+  "1900",
+  "2100",
+  "2300",
+  "2500",
+  "2700",
+];
+export const timeDelayDatabases: string[] = [
+  "100",
+  "300",
+  "500",
+  "700",
+];

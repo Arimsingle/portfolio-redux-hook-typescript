@@ -20,14 +20,16 @@ const Project: React.FC = () => {
       >
         <span className="text__highlight">MY PROJECT</span>
       </h1>
+
       <div className="project__content">
         <Row
           gutter={[
-            { xs: 6, sm: 8, md: 12, lg: 15 },
-            { xs: 6, sm: 8, md: 12, lg: 15 },
+            { xs: 8, sm: 16, md: 24, lg: 32 },
+            { xs: 8, sm: 16, md: 24, lg: 32 },
           ]}
+          justify="space-around"
         >
-          <Col xs={24} sm={12} md={8} lg={6}>
+          <Col xs={{ order: 1 }} sm={{ order: 2 }} md={{ order: 3 }} lg={{ order: 4 }}>
             <div className="card">
               <div className="card__overlay">
                 <img
@@ -55,7 +57,7 @@ const Project: React.FC = () => {
                           <Tag
                             color={
                               tagsColor[
-                                Math.floor(Math.random() * tagsColor.length)
+                              Math.floor(Math.random() * tagsColor.length)
                               ]
                             }
                           >
@@ -69,11 +71,11 @@ const Project: React.FC = () => {
               </div>
             </div>
           </Col>
-          <Col xs={24} sm={12} md={8} lg={6}>
+          <Col xs={{ order: 1 }} sm={{ order: 2 }} md={{ order: 3 }} lg={{ order: 4 }}>
             <div className="card">
               <div className="card__overlay">
                 <img
-                  src="images/smart police.png"
+                  src="images/covid.png"
                   className="card__background"
                 />
               </div>
@@ -95,7 +97,7 @@ const Project: React.FC = () => {
                           <Tag
                             color={
                               tagsColor[
-                                Math.floor(Math.random() * tagsColor.length)
+                              Math.floor(Math.random() * tagsColor.length)
                               ]
                             }
                           >
@@ -109,7 +111,7 @@ const Project: React.FC = () => {
               </div>
             </div>
           </Col>
-          <Col xs={24} sm={12} md={8} lg={6}>
+          <Col xs={{ order: 1 }} sm={{ order: 2 }} md={{ order: 3 }} lg={{ order: 4 }}>
             <div className="card">
               <div className="card__overlay">
                 <img
@@ -135,7 +137,7 @@ const Project: React.FC = () => {
                           <Tag
                             color={
                               tagsColor[
-                                Math.floor(Math.random() * tagsColor.length)
+                              Math.floor(Math.random() * tagsColor.length)
                               ]
                             }
                           >
@@ -149,7 +151,7 @@ const Project: React.FC = () => {
               </div>
             </div>
           </Col>
-          <Col xs={24} sm={12} md={8} lg={6}>
+          <Col xs={{ order: 1 }} sm={{ order: 2 }} md={{ order: 3 }} lg={{ order: 4 }}>
             <div className="card">
               <div className="card__overlay">
                 <img src="images/detect.png" className="card__background" />
@@ -170,7 +172,7 @@ const Project: React.FC = () => {
                           <Tag
                             color={
                               tagsColor[
-                                Math.floor(Math.random() * tagsColor.length)
+                              Math.floor(Math.random() * tagsColor.length)
                               ]
                             }
                           >
@@ -186,9 +188,14 @@ const Project: React.FC = () => {
           </Col>
         </Row>
       </div>
-        <div>
-          <img src="images/robot-programer.png" />
-        </div>
+      <div className="svg-robot-container">
+        <img src="images/robot-programer.png" className="robot" />
+        <img src="images/shape/Backgorund-project.png" className="backgorund"
+          data-aos="fade-right"
+          data-aos-delay="300"
+          data-aos-duration="1000" />
+
+      </div>
     </div>
   );
 };

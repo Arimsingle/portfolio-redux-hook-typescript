@@ -1,6 +1,4 @@
-@import '../shared/shared';
-
-
+@import "../shared/shared";
 
 .text {
     text-align: center;
@@ -8,28 +6,38 @@
     z-index: 1;
 
     &__header {
-
         font-size: 3.125rem;
         font-weight: normal;
         line-height: 1.5rem;
         color: map-get($colors, orange-dart);
-
     }
 
     &__highlight {
         color: map-get($colors, orange-dart);
-
+    }
+    @include breakpoint-down(sm) {
+        &__header {
+            font-size: 1.4375rem; //23px
+        }
+    }
+    @include breakpoint-up(sm) {
+        &__header {
+            font-size: 2.1875rem;
+        }
+    }
+    @include breakpoint-up(lg) {
+        &__header {
+            font-size: 3rem;
+        }
     }
 }
 
 .photo {
-    
     position: relative;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-
 
     &__header {
         position: relative;
@@ -39,13 +47,34 @@
         height: 37.5rem;
     }
 
+    @include breakpoint-down(sm) {
+        &__header {
+            top: -4.375rem;
+            width: 18.75rem;
+            height: 18.75rem;
+        }
+    }
+    @include breakpoint-up(sm) {
+        &__header {
+            top: -3.375rem;
+            width: 23.75rem;
+            height: 23.75rem;
+        }
+    }
+    @include breakpoint-up(lg) {
+        &__header {
+            top: -5.375rem;
+            width: 30rem;
+            height: 30rem;
+        }
+    }
+
     &__scroll {
         box-shadow: inset 0 0 0 2px map-get($colors, orange-soft);
     }
 
     &__scroll_dart {
         box-shadow: inset 0 0 0 2px map-get($colors, dart);
-
     }
 
     &__scroll,
@@ -64,7 +93,7 @@
         }
 
         &::before {
-            content: '';
+            content: "";
             width: 0.75rem;
             height: 1.125rem;
             background: $color-orange;
@@ -93,6 +122,24 @@
         }
     }
 
+    @include breakpoint-down(sm) {
+        &__scroll,
+        &__scroll_dart {
+            top: 18rem;
+        }
+    }
+    @include breakpoint-up(sm) {
+        &__scroll,
+        &__scroll_dart {
+            top: 25.375rem;
+        }
+    }
+    @include breakpoint-up(lg) {
+        &__scroll,
+        &__scroll_dart {
+            top: 30rem;
+        }
+    }
 }
 
 .emoji {
@@ -106,41 +153,36 @@
         top: -650px; //-342.26
         transform: rotate(0);
         transform: scale(1);
-        transition: all .2s ease-in;
-
+        transition: all 0.2s ease-in;
 
         &:hover {
             transform: scale(1.1);
             transform: rotate(36.84deg);
-            transition: all .2s ease-in;
+            transition: all 0.2s ease-in;
             cursor: pointer;
-            
         }
     }
 
     &__smail.active {
-        animation: appear .3s ease-in alternate;
+        animation: appear 0.3s ease-in alternate;
 
         @keyframes appear {
             0% {
                 opacity: 0;
-                transform: scale(.8);
-                transition: opacity .3s ease-in, transform .3s ease-in;
-
+                transform: scale(0.8);
+                transition: opacity 0.3s ease-in, transform 0.3s ease-in;
             }
 
             70% {
-                opacity: .5;
+                opacity: 0.5;
                 transform: scale(1.1);
-                transition: opacity .3s ease-in, transform .3s ease-in;
-
+                transition: opacity 0.3s ease-in, transform 0.3s ease-in;
             }
 
             100% {
                 opacity: 1;
                 transform: scale(1);
-                transition: opacity .3s ease-in, transform .3s ease-in;
-
+                transition: opacity 0.3s ease-in, transform 0.3s ease-in;
             }
         }
     }
@@ -150,39 +192,37 @@
         z-index: 1;
         right: 300px;
         top: -500px;
-        transition: all .1s ease-in, all .2s ease-in;
+        transition: all 0.1s ease-in, all 0.2s ease-in;
 
         &:hover {
             transform: scale(1.1);
             transform: rotate(-22.42deg);
             cursor: pointer;
-
         }
     }
 
     &__xSmail.active {
-        animation: appear .3s ease-in alternate;
+        position: absolute;
+
+        animation: appear 0.3s ease-in alternate;
 
         @keyframes appear {
             0% {
                 opacity: 0;
-                transform: scale(.8);
-                transition: opacity .3s ease-in, transform .3s ease-in;
-
+                transform: scale(0.8);
+                transition: opacity 0.3s ease-in, transform 0.3s ease-in;
             }
 
             70% {
-                opacity: .5;
+                opacity: 0.5;
                 transform: scale(1.1);
-                transition: opacity .3s ease-in, transform .3s ease-in;
-
+                transition: opacity 0.3s ease-in, transform 0.3s ease-in;
             }
 
             100% {
                 opacity: 1;
                 transform: scale(1);
-                transition: opacity .3s ease-in, transform .3s ease-in;
-
+                transition: opacity 0.3s ease-in, transform 0.3s ease-in;
             }
         }
     }
@@ -192,39 +232,34 @@
         z-index: 1;
         left: 200px;
         top: -430px;
-        transition: all .1s ease-in;
+        transition: all 0.1s ease-in;
 
         &:hover {
             transform: scale(1.1);
             cursor: pointer;
-
         }
-
     }
 
     &__shy.active {
-        animation: appear .3s ease-in alternate;
+        animation: appear 0.3s ease-in alternate;
 
         @keyframes appear {
             0% {
                 opacity: 0;
-                transform: scale(.8);
-                transition: opacity .3s ease-in, transform .3s ease-in;
-
+                transform: scale(0.8);
+                transition: opacity 0.3s ease-in, transform 0.3s ease-in;
             }
 
             70% {
-                opacity: .5;
+                opacity: 0.5;
                 transform: scale(1.1);
-                transition: opacity .3s ease-in, transform .3s ease-in;
-
+                transition: opacity 0.3s ease-in, transform 0.3s ease-in;
             }
 
             100% {
                 opacity: 1;
                 transform: scale(1);
-                transition: opacity .3s ease-in, transform .3s ease-in;
-
+                transition: opacity 0.3s ease-in, transform 0.3s ease-in;
             }
         }
     }
@@ -235,38 +270,34 @@
         height: 130px;
         left: 1300.64px;
         top: -650px;
-        transition: all .1s ease-in;
+        transition: all 0.1s ease-in;
 
         &:hover {
             transform: scale(1.1);
             cursor: pointer;
-
         }
     }
 
     &__glass.active {
-        animation: appear .3s ease-in alternate;
+        animation: appear 0.3s ease-in alternate;
 
         @keyframes appear {
             0% {
                 opacity: 0;
-                transform: scale(.8);
-                transition: opacity .3s ease-in, transform .3s ease-in;
-
+                transform: scale(0.8);
+                transition: opacity 0.3s ease-in, transform 0.3s ease-in;
             }
 
             70% {
-                opacity: .5;
+                opacity: 0.5;
                 transform: scale(1.1);
-                transition: opacity .3s ease-in, transform .3s ease-in;
-
+                transition: opacity 0.3s ease-in, transform 0.3s ease-in;
             }
 
             100% {
                 opacity: 1;
                 transform: scale(1);
-                transition: opacity .3s ease-in, transform .3s ease-in;
-
+                transition: opacity 0.3s ease-in, transform 0.3s ease-in;
             }
         }
     }
@@ -277,40 +308,34 @@
         height: 128px;
         left: 443.35px;
         top: -250.35px;
-        transition: all .1s ease-in;
+        transition: all 0.1s ease-in;
 
         &:hover {
             transform: scale(1.1);
             cursor: pointer;
-
         }
     }
 
-    &__kiss {
-        .active {
-            animation: appear .3s ease-in alternate;
+    &__kiss.active {
+        animation: appear 0.3s ease-in alternate;
 
-            @keyframes appear {
-                0% {
-                    opacity: 0;
-                    transform: scale(.8);
-                    transition: opacity .3s ease-in, transform .3s ease-in;
+        @keyframes appear {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+                transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+            }
 
-                }
+            70% {
+                opacity: 0.5;
+                transform: scale(1.1);
+                transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+            }
 
-                70% {
-                    opacity: .5;
-                    transform: scale(1.1);
-                    transition: opacity .3s ease-in, transform .3s ease-in;
-
-                }
-
-                100% {
-                    opacity: 1;
-                    transform: scale(1);
-                    transition: opacity .3s ease-in, transform .3s ease-in;
-
-                }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+                transition: opacity 0.3s ease-in, transform 0.3s ease-in;
             }
         }
     }
@@ -319,40 +344,65 @@
         position: absolute;
         left: 1300px;
         top: -260.67px;
-        transition: all .1s ease-in;
+        transition: all 0.1s ease-in;
 
         &:hover {
             transform: scale(1.1);
             cursor: pointer;
-
         }
     }
 
     &__xxSmail.active {
-        animation: appear .3s ease-in alternate;
+        animation: appear 0.3s ease-in alternate;
 
         @keyframes appear {
             0% {
                 opacity: 0;
-                transform: scale(.8);
-                transition: opacity .3s ease-in, transform .3s ease-in;
-
+                transform: scale(0.8);
+                transition: opacity 0.3s ease-in, transform 0.3s ease-in;
             }
 
             70% {
-                opacity: .5;
+                opacity: 0.5;
                 transform: scale(1.1);
-                transition: opacity .3s ease-in, transform .3s ease-in;
-
+                transition: opacity 0.3s ease-in, transform 0.3s ease-in;
             }
 
             100% {
                 opacity: 1;
                 transform: scale(1);
-                transition: opacity .3s ease-in, transform .3s ease-in;
-
+                transition: opacity 0.3s ease-in, transform 0.3s ease-in;
             }
         }
     }
 
+    @include breakpoint-down(xxl) {
+        &__smail {
+            display: block;
+            left: 300px; //-170
+            top: -650px; //-342.26
+        }
+        &__kiss {
+            display: block;
+
+            left: 343.35px;
+            top: -250.35px;
+        }
+        &__shy {
+            left: 150px;
+            top: -430px;
+        }
+        &__glass {
+            left: 1100.64px;
+            top: -650px;
+        }
+        &__xSmail {
+            right: 200px;
+            top: -450px;
+        }
+        &__xxSmail {
+            left: 1100px;
+            top: -260.67px;
+        }
+    }
 }

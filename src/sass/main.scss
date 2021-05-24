@@ -1,22 +1,21 @@
-@import 'component/shared/shared';
-@import 'component/nav/navbar';
-@import 'component/section/home';
-@import 'component/section/about';
-@import 'component/section/project';
-@import 'component/section/skill';
-@import 'component/section/blog';
-@import 'component/section/experience';
+@import "component/shared/shared";
+@import "component/shared/mixins";
+@import "component/nav/navbar";
+@import "component/section/home";
+@import "component/section/about";
+@import "component/section/project";
+@import "component/section/skill";
+@import "component/section/blog";
+@import "component/section/experience";
 
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Rubik', sans-serif;
+    font-family: "Rubik", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     // background-color: $color-white;
     box-sizing: border-box;
-    
-
 }
 
 .white-mode {
@@ -26,6 +25,12 @@ body {
     padding: 0;
     box-sizing: border-box;
     transition: all 0.25s linear;
+    @include breakpoint-down(sm) {
+        height: auto;
+    }
+    @include breakpoint-up(sm) {
+        height: auto;
+    }
 }
 
 .dart-mode {
@@ -35,13 +40,18 @@ body {
     padding: 0;
     box-sizing: border-box;
     transition: all 0.25s linear;
+    @include breakpoint-down(sm) {
+        height: auto;
+    }
+    @include breakpoint-up(sm) {
+        height: auto;
+    }
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-        monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 h1 {
-    color: $color-gray;
+    color: map-get($colors, xxdart);
 }
