@@ -10,8 +10,6 @@ const Home: React.FC = () => {
         data-aos="fade-down"
         data-aos-delay="2000"
         data-aos-duration="1000"
-      // data-aos-easing="ease-in-out"
-      // data-aos-mirror="true"
       >
         <h1
           className="text__header"
@@ -40,7 +38,7 @@ const Home: React.FC = () => {
         />
         <span
           data-aos="fade-up"
-          data-aos-delay="3000"
+          data-aos-delay="1000"
           data-aos-duration="1000"
           className={toggleTheme ? "photo__scroll_dart" : "photo__scroll"}
         ></span>

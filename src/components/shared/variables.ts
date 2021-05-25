@@ -39,15 +39,13 @@ export const Tools_Libraries: string[] = [
   "React Native",
   "Next",
   "Node",
-  "Express",
-  "Web3",
   "Nest",
+  "Express",
+  "Web3/Ethers",
   "REST API",
   "GraphQL",
   "Redux",
-  "Geth",
-  "Truffle",
-  "Genache",
+  "Truffle/Geth",
   "infura",
 ];
 export const Databases: string[] = [

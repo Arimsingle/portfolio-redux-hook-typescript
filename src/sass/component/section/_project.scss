@@ -4,7 +4,6 @@
     overflow: hidden;
     .svg-robot-container {
         position: relative;
-        // margin-left: 100px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -45,7 +44,7 @@
             border-radius: 3px;
             box-shadow: 0 0 13px rgba(0, 0, 0, 0.1);
             transition: 0.3s;
-            background: map-get($colors, xwhite);
+            background: linear-gradient(to right, map-get($colors, xwhite), #fffdf5);
 
             &__overlay {
                 background: map-get($colors, dart);

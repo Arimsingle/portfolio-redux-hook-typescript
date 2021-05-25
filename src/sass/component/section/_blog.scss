@@ -1,4 +1,4 @@
-@import '../shared/shared';
+@import "../shared/shared";
 
 .blog {
     &__header {
@@ -9,8 +9,20 @@
 
         .text__highlight {
             background: linear-gradient(90deg, rgba(255, 111, 0, 1) 52%, rgba(255, 145, 0, 1) 100%);
-            -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
+            @include breakpoint-down(sm) {
+                font-size: 2rem;
+            }
+            @include breakpoint-up(sm) {
+                font-size: 2.3rem;
+            }
+            @include breakpoint-up(lg) {
+                font-size: 2.8rem;
+            }
+            @include breakpoint-up(xl) {
+                font-size: 3rem;
+            }
         }
     }
 
@@ -18,7 +30,17 @@
         display: flex;
         align-items: center;
         justify-content: center;
-
     }
-
+    .logo-medium {
+        margin-bottom: 50px;
+        @include breakpoint-down(sm) {
+            font-size: 80px;
+        }
+        @include breakpoint-up(sm) {
+            font-size: 120px;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
 }

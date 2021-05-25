@@ -30,7 +30,10 @@ const Project: React.FC = () => {
           justify="space-around"
         >
           <Col xs={{ order: 1 }} sm={{ order: 2 }} md={{ order: 3 }} lg={{ order: 4 }}>
-            <div className="card">
+            <div className="card"
+              data-aos="fade-up"
+              data-aos-delay="500"
+              data-aos-duration="1000">
               <div className="card__overlay">
                 <img
                   src="images/smart police.png"
@@ -72,7 +75,10 @@ const Project: React.FC = () => {
             </div>
           </Col>
           <Col xs={{ order: 1 }} sm={{ order: 2 }} md={{ order: 3 }} lg={{ order: 4 }}>
-            <div className="card">
+            <div className="card"
+              data-aos="fade-up"
+              data-aos-delay="800"
+              data-aos-duration="1000">
               <div className="card__overlay">
                 <img
                   src="images/covid.png"
@@ -112,7 +118,10 @@ const Project: React.FC = () => {
             </div>
           </Col>
           <Col xs={{ order: 1 }} sm={{ order: 2 }} md={{ order: 3 }} lg={{ order: 4 }}>
-            <div className="card">
+            <div className="card"
+              data-aos="fade-up"
+              data-aos-delay="1100"
+              data-aos-duration="1000">
               <div className="card__overlay">
                 <img
                   src="images/face decrypt.png"
@@ -152,7 +161,10 @@ const Project: React.FC = () => {
             </div>
           </Col>
           <Col xs={{ order: 1 }} sm={{ order: 2 }} md={{ order: 3 }} lg={{ order: 4 }}>
-            <div className="card">
+            <div className="card"
+              data-aos="fade-up"
+              data-aos-delay="1400"
+              data-aos-duration="1000">
               <div className="card__overlay">
                 <img src="images/detect.png" className="card__background" />
               </div>
@@ -160,7 +172,9 @@ const Project: React.FC = () => {
                 <p className="card__title">Detect Orange</p>
                 <div className="card__content">
                   <p className="card__descriptionTitle">Desktop Application</p>
-
+                  <span className="tag">
+                    <Tag color="orange">#Nope -. -</Tag>
+                  </span>
                   <p className="card__description">
                     เป็นโปรเจคที่นำเทคโนโลยี่ Blockchain กับ Deep learning
                     มายกระดับการปฏิบัติหน้าของเจ้าหน้าที่ตำรวจ

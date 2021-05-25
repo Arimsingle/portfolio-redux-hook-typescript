@@ -33,9 +33,9 @@ const App: React.FC = () => {
       <section className={handleThemeChanged()}>
         <Skill />
       </section>
-      {/* <section className={handleThemeChanged()}>
+      <section className={handleThemeChanged()}>
         <Blog />
-      </section> */}
+      </section>
     </div>
   );
 };

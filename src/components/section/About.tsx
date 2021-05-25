@@ -13,11 +13,11 @@ import { useSpring, a } from "@react-spring/web";
 const About: React.FC = () => {
   const toggleTheme = useSelector((state: stateReduxType) => state.theme);
   const [flipped, setFlipped] = useState(false);
-  const { transform, opacity } = useSpring({
-    opacity: flipped ? 1 : 0,
-    transform: `perspective(600px) rotate(${flipped ? 180 : 0}deg)`,
-    config: { mass: 5, tension: 500, friction: 80 },
-  });
+  // const { transform, opacity } = useSpring({
+  //   opacity: flipped ? 1 : 0,
+  //   transform: `perspective(600px) rotate(${flipped ? 180 : 0}deg)`,
+  //   config: { mass: 5, tension: 500, friction: 80 },
+  // });
   const contentHover = (
     <div style={{ display: "flex", justifyContent: "space-around" }}>
       <p>Yes😂</p>
@@ -135,7 +135,7 @@ const About: React.FC = () => {
               </li>
               <li>
                 <a
-                  href="https://github.com/Arimsingle"
+                  href="https://twitter.com/"
                   target="_blank"
                   rel="noreferrer"
                   data-aos="zoom-in"
@@ -181,20 +181,6 @@ const About: React.FC = () => {
             data-aos-duration="1000"
           >
           </span>
-          {/* <div onClick={() => setFlipped((state) => !state)}>
-            <a.div
-              className="control back"
-              style={{ opacity: opacity.to((o) => 1 - o), transform }}
-            />
-            <a.div
-              className="control front"
-              style={{
-                opacity,
-                transform,
-                rotateX: "180deg",
-              }}
-            />
-          </div> */}
         </div>
       </div>
     </div >

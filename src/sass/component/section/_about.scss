@@ -127,7 +127,6 @@
 
             .icon_notebook {
                 animation: transform 1s ease-in-out infinite;
-                // background-color: map-get($colors, orange-sort);
                 border-radius: 5px;
 
                 @keyframes transform {
