@@ -171,13 +171,13 @@ const About: React.FC = () => {
           </div>
         </div>
         <div className="about__content__right">
-          <span
+          <img
             className="ciecle"
             data-aos="fade-up"
             data-aos-delay="200"
             data-aos-duration="1000"
-          >
-          </span>
+            src="images/me-profile2.png"
+          />
         </div>
       </div>
     </div >

@@ -45,7 +45,9 @@
             box-shadow: 0 0 13px rgba(0, 0, 0, 0.1);
             transition: 0.3s;
             background: linear-gradient(to right, map-get($colors, xwhite), #fffdf5);
-
+            &:hover {
+                cursor: pointer;
+            }
             &__overlay {
                 background: map-get($colors, dart);
                 overflow: hidden;

@@ -54,36 +54,27 @@
         &__right {
             .ciecle {
                 display: block;
-                width: 430px;
-                height: 430px;
-                border-radius: 50%;
-                box-shadow: 0 0 13px rgba(0, 0, 0, 0.1);
-                background: rgb(255, 111, 0);
-                background: linear-gradient(90deg, rgba(255, 111, 0, 1) 52%, rgba(255, 145, 0, 1) 100%);
+                width: 350px;
                 margin-bottom: 30px;
             }
             @include breakpoint-down(sm) {
                 .ciecle {
                     width: 250px;
-                    height: 250px;
                 }
             }
             @include breakpoint-up(sm) {
                 .ciecle {
                     width: 280px;
-                    height: 280px;
                 }
             }
             @include breakpoint-up(lg) {
                 .ciecle {
                     width: 300px;
-                    height: 300px;
                 }
             }
             @include breakpoint-up(xl) {
                 .ciecle {
                     width: 330px;
-                    height: 330px;
                 }
             }
         }

@@ -1,4 +1,4 @@
-// import from Emoji component
+//Emoji.js =>>> Do not used yet
 export const svgVariables: string[] = [
   "Emoji 3",
   "Emoji 8",
@@ -24,7 +24,7 @@ export const svgStyles: string[] = [
   "emoji__xxSmail",
 ];
 
-// import from Experience component
+//Skill.js
 export const Languages: string[] = [
   "JavaScript",
   "TypeScript",
@@ -55,7 +55,7 @@ export const Databases: string[] = [
   "Blockchain/Ethereum",
 ];
 
-// import from Project component
+//Skill.js
 export const toolsSmartPolice: string[] = [
   "Next.js",
   "Node.js",
@@ -80,21 +80,7 @@ export const toolsFaceDecrypt: string[] = [
 export const toolsObjDetection: string[] = ["OpenCV", "Line notify"];
 export const toolsBackPink: string[] = ["React Native", "Redux"];
 
-//export to project component
-export const tagsColor: string[] = [
-  "magenta",
-  "red",
-  "volcano",
-  "orange",
-  "gold",
-  "lime",
-  "cyan",
-  "blue",
-  "geekblue",
-  "purple",
-];
-
-//export to skill component
+//Skill.js
 export const timeDelayLanguages: string[] = [
   "100",
   "300",
@@ -126,3 +112,31 @@ export const timeDelayDatabases: string[] = [
   "500",
   "700",
 ];
+
+//Project.js
+export const tagsColor: string[] = [
+  "magenta",
+  "red",
+  "volcano",
+  "orange",
+  "gold",
+  "lime",
+  "cyan",
+  "blue",
+  "geekblue",
+  "purple",
+];
+
+
+//Experience.js
+export const timeLineEducations: string[][] = [
+  ["100", "2014-2017", "High School at Sungaikolok Narathiwak Mathematics-Science Program"],
+  ["200", "2017-2021", "Bechelor of Computer Engineering Prince of Songkla University Phuket Campus"],
+]
+export const timeLineExperiences: string[][] = [
+  ["100", "2014-2017", "Blockchain Developer Intern at Bitkub"],
+  ["200", "2017-2021", "Super AI 2021"],
+  ["300", "2017-2021", "NSC 2021"],
+  ["500", "2017-2021", "Top Gun 2021"],
+  ["600", "2017-2021", "Blockchain and Smart Contract for Developers at PSU Phuket"],
+]

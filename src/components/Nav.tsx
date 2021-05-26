@@ -106,7 +106,7 @@ const Nav: React.FC = () => {
         >RESUME</button>
         <div>
           <div className="navbar__burger">
-            <UseAnimations animation={menu3} size={40} strokeColor="#ff6f00" />
+            <UseAnimations animation={menu3} size={38} strokeColor="#ff6f00" />
           </div>
         </div>
 
