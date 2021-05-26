@@ -5,12 +5,25 @@
 }
 
 .navbar {
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    box-sizing: border-box;
-
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 5px;
+    z-index: 3;
+    animation: hoverAnimation 3s ease-in alternate-reverse infinite;
+    @keyframes hoverAnimation {
+        from {
+            box-shadow: 0px 0px 0px rgba(255, 153, 0, 0.1);
+        }
+        to {
+            box-shadow: 10px 10px 80px rgba(255, 153, 0, 0.1);
+        }
+    }
     &__list {
         display: flex;
         flex-direction: row;
@@ -67,6 +80,7 @@
             font-size: 2rem;
             transition: transform 0.2s linear;
             color: map-get($colors, orange-dart);
+            margin: 0;
         }
 
         .logo:hover {
@@ -188,7 +202,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 20px;
+        padding: 6px 20px;
+
         &__list,
         &__button,
         svg.dart_theme,
@@ -197,6 +212,7 @@
         }
     }
     @include breakpoint-up(md) {
+        padding: 6px 20px;
         &__burger {
             display: none;
         }

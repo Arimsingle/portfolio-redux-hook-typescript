@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { stateReduxType } from "../../redux/store";
-import Emoji from "../emoji/Emoji";
+// import Emoji from "../emoji/Emoji";
 const Home: React.FC = () => {
   const toggleTheme = useSelector((state: stateReduxType) => state.theme);
   return (

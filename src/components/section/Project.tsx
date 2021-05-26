@@ -7,7 +7,7 @@ import {
   toolsCovidNineTeen,
   toolsFaceDecrypt,
   toolsObjDetection,
-  toolsBackPink,
+  // toolsBackPink,
   tagsColor,
 } from "../shared/variables";
 const Project: React.FC = () => {
@@ -38,6 +38,7 @@ const Project: React.FC = () => {
                 <img
                   src="images/smart police.png"
                   className="card__background"
+                  alt="smart police"
                 />
               </div>
               <div className="card__container">
@@ -83,6 +84,7 @@ const Project: React.FC = () => {
                 <img
                   src="images/covid.png"
                   className="card__background"
+                  alt="covid"
                 />
               </div>
               <div className="card__container">
@@ -126,6 +128,7 @@ const Project: React.FC = () => {
                 <img
                   src="images/face decrypt.png"
                   className="card__background"
+                  alt="face decrypt"
                 />
               </div>
               <div className="card__container">
@@ -166,7 +169,7 @@ const Project: React.FC = () => {
               data-aos-delay="1400"
               data-aos-duration="1000">
               <div className="card__overlay">
-                <img src="images/detect.png" className="card__background" />
+                <img src="images/detect.png" alt="detect" className="card__background" />
               </div>
               <div className="card__container">
                 <p className="card__title">Detect Orange</p>
@@ -203,8 +206,8 @@ const Project: React.FC = () => {
         </Row>
       </div>
       <div className="svg-robot-container">
-        <img src="images/robot-programer.png" className="robot" />
-        <img src="images/shape/Backgorund-project.png" className="backgorund"
+        <img src="images/robot-programer.png" alt="robot-programer" className="robot" />
+        <img src="images/shape/Backgorund-project.png" alt="Backgorund-project" className="backgorund"
           data-aos="fade-right"
           data-aos-delay="300"
           data-aos-duration="1000" />

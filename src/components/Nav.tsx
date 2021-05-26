@@ -11,7 +11,7 @@ const Nav: React.FC = () => {
   const dispatch = useDispatch();
   return (
     <>
-      <div className="navbar">
+      <div className="navbar" style={toggleTheme ? { backgroundColor: "#fff" } : { backgroundColor: "#121212" }}>
         <div className="navbar__logo">
           <h1 className="logo"
             data-aos="fade-down"
@@ -104,9 +104,12 @@ const Nav: React.FC = () => {
           data-aos-delay="1700"
           data-aos-duration="1000"
         >RESUME</button>
-        <div className="navbar__burger">
-          <UseAnimations animation={menu3} size={40} strokeColor="#ff6f00" />
+        <div>
+          <div className="navbar__burger">
+            <UseAnimations animation={menu3} size={40} strokeColor="#ff6f00" />
+          </div>
         </div>
+
       </div>
     </>
   );

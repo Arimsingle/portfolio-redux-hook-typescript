@@ -1,5 +1,4 @@
 import { Timeline } from "antd";
-import { CheckCircleOutlined } from "@ant-design/icons";
 import { useSelector } from "react-redux";
 import { stateReduxType } from "../../redux/store";
 const Experience = () => {
@@ -128,7 +127,7 @@ const Experience = () => {
         </div>
       </div>
       <div className="png-goal-container">
-        <img src="images/goal.png" className="png-goal"
+        <img src="images/goal.png" alt="goal" className="png-goal"
         />
         {/* <img src="images/shape/Background-experiance.png" className="png-bg-goal"
           data-aos="fade-up"

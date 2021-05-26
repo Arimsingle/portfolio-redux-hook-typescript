@@ -7,12 +7,9 @@ import { stateReduxType } from "../../redux/store";
 import { FiUser, FiPhone, FiMail } from "react-icons/fi";
 import { RiCommunityLine, RiHotelLine } from "react-icons/ri";
 import { Popover } from "antd";
-import { useState } from "react";
-import { useSpring, a } from "@react-spring/web";
 
 const About: React.FC = () => {
   const toggleTheme = useSelector((state: stateReduxType) => state.theme);
-  const [flipped, setFlipped] = useState(false);
   // const { transform, opacity } = useSpring({
   //   opacity: flipped ? 1 : 0,
   //   transform: `perspective(600px) rotate(${flipped ? 180 : 0}deg)`,
@@ -126,7 +123,7 @@ const About: React.FC = () => {
                 >
                   <UseAnimations
                     animation={github}
-                    size={56}
+                    size={38}
                     autoplay={true}
                     loop={true}
                     strokeColor="#fe8019"
@@ -144,7 +141,7 @@ const About: React.FC = () => {
                 >
                   <UseAnimations
                     animation={twitter}
-                    size={56}
+                    size={38}
                     autoplay={true}
                     loop={true}
                     reverse={true}
@@ -163,7 +160,7 @@ const About: React.FC = () => {
                 >
                   <UseAnimations
                     animation={facebook}
-                    size={56}
+                    size={38}
                     autoplay={true}
                     loop={true}
                     strokeColor="#fe8019"

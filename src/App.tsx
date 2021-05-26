@@ -15,7 +15,7 @@ const App: React.FC = () => {
   const toggleTheme = useSelector((state: stateReduxType) => state.theme);
   return (
     <div className={handleThemeChanged()}>
-      <header>
+      <header >
         <Nav />
       </header>
       <section className={handleThemeChanged()}>
