@@ -78,6 +78,9 @@ const Skill: React.FC = () => {
           </div>
         </div>
       </div>
+      <div className="me-skill-container">
+        <img src="images/Saly-11.png" alt="me-skill" className="me-skill" />
+      </div>
     </div>
   );
 };

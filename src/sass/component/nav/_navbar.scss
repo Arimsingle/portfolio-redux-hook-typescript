@@ -53,7 +53,7 @@
 
             &.underline {
                 position: relative;
-
+                transition: all .1s ease-in;
                 &::before {
                     content: "";
                     position: absolute;
@@ -63,9 +63,16 @@
                 }
 
                 &:hover::before {
-                    content: "";
-                    position: absolute;
-                    bottom: -0.5rem;
+                    top: 2.5rem;
+                    height: 0.25rem;
+                    width: 3.3125rem;
+                    border-radius: 0.625rem;
+                    background-color: map-get($colors, orange-dart);
+                }
+            }
+            &.underline.active {
+                &::before {
+                    top: 2.5rem;
                     height: 0.25rem;
                     width: 3.3125rem;
                     border-radius: 0.625rem;

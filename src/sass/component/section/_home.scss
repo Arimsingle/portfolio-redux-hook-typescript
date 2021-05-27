@@ -4,7 +4,7 @@
     text-align: center;
     position: relative;
     z-index: 1;
-    top:30px;
+    top: 100px;
     &__header {
         font-size: 3.125rem;
         font-weight: normal;
@@ -14,7 +14,6 @@
 
     &__highlight {
         color: map-get($colors, orange-dart);
-
     }
     @include breakpoint-down(sm) {
         &__header {
@@ -28,7 +27,7 @@
     }
     @include breakpoint-up(lg) {
         &__header {
-            font-size: 3rem;
+            font-size: 2.5rem;
         }
     }
 }
@@ -43,30 +42,30 @@
     &__header {
         position: relative;
         display: block;
-        top: -7.375rem;
+        top: 0rem;
         width: 37.5rem;
         height: 37.5rem;
     }
 
     @include breakpoint-down(sm) {
         &__header {
-            top: -4.375rem;
+            top: 0rem;
             width: 18.75rem;
             height: 18.75rem;
         }
     }
     @include breakpoint-up(sm) {
         &__header {
-            top: -3.375rem;
+            top: 0rem;
             width: 23.75rem;
             height: 23.75rem;
         }
     }
     @include breakpoint-up(lg) {
         &__header {
-            top: -5.375rem;
-            width: 30rem;
-            height: 30rem;
+            top: 0rem;
+            width: 25rem;
+            height: 25rem;
         }
     }
 

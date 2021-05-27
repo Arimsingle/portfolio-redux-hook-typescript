@@ -2,6 +2,7 @@
 
 .project {
     overflow: hidden;
+    box-sizing: border-box;
     .svg-robot-container {
         position: relative;
         display: flex;
@@ -12,6 +13,9 @@
             position: absolute;
             top: 50px;
             left: 0;
+        }
+        .robot {
+            width: 250px;
         }
     }
     &__header {

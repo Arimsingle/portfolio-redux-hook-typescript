@@ -10,11 +10,6 @@ import { Popover } from "antd";
 
 const About: React.FC = () => {
   const toggleTheme = useSelector((state: stateReduxType) => state.theme);
-  // const { transform, opacity } = useSpring({
-  //   opacity: flipped ? 1 : 0,
-  //   transform: `perspective(600px) rotate(${flipped ? 180 : 0}deg)`,
-  //   config: { mass: 5, tension: 500, friction: 80 },
-  // });
   const contentHover = (
     <div style={{ display: "flex", justifyContent: "space-around" }}>
       <p>Yes😂</p>

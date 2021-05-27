@@ -26,8 +26,7 @@ export const svgStyles: string[] = [
 
 //Skill.js
 export const Languages: string[] = [
-  "JavaScript",
-  "TypeScript",
+  "JavaScript/TypeScript",
   "Solidity",
   "C/C++",
   "Python",

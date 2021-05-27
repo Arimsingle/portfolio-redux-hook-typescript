@@ -63,8 +63,7 @@ const Experience = () => {
         </div>
       </div>
       <div className="png-goal-container">
-        <img src="images/goal.png" alt="goal" className="png-goal"
-        />
+        <img src="images/goal.png" alt="goal" className="png-goal"/>
       </div>
     </div>
   );

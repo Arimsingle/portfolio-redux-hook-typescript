@@ -4,9 +4,8 @@
     overflow: hidden;
     margin: 0;
     padding: 0;
-
     &__header {
-        margin: 0;
+        margin-top: 80px;
         text-align: center;
         font-weight: bold;
         font-size: 48px;
@@ -141,4 +140,13 @@
             }
         }
     }
+}
+.me-skill-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.me-skill {
+    margin-left: 30px;
+    width: 300px;
 }

@@ -44,3 +44,14 @@
         }
     }
 }
+
+.footer {
+    position: relative;
+    &__container {
+        position: absolute;
+        background-color: aquamarine;
+        background: deepskyblue;
+        width: auto;
+        height: auto;
+    }
+}

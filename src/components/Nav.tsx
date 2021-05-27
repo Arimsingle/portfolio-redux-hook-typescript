@@ -3,66 +3,66 @@ import { themeService } from "../redux/services";
 import { stateReduxType } from "../redux/store";
 import UseAnimations from 'react-useanimations';
 import menu3 from 'react-useanimations/lib/menu3'
-const Nav: React.FC = () => {
+const Nav = ({ headerRef, scrollTo, HomeRef, AboutRef, ExperienceRef, ProjectRef, SkillRef, BlogRef, visibleSection }: any) => {
   //theme default is dart color
   const toggleTheme = useSelector((state: stateReduxType) => state.theme);
-  console.log(toggleTheme);
-
   const dispatch = useDispatch();
+
   return (
-    <>
+    <div ref={headerRef}>
       <div className="navbar" style={toggleTheme ? { backgroundColor: "#fff" } : { backgroundColor: "#121212" }}>
         <div className="navbar__logo">
           <h1 className="logo"
-            data-aos="fade-down"
-            data-aos-delay="100"
-            data-aos-duration="1000"
+            onClick={() => {
+              scrollTo(HomeRef.current);
+            }}
           >有馬</h1>
         </div>
         <div className="navbar__list">
           <ul>
             <li
-              className="underline active"
+              className={`underline ${visibleSection === "Home" && "active"}`}
               style={toggleTheme ? { color: "#121212" } : { color: "#fbf1c7" }}
-              data-aos="fade-down"
-              data-aos-delay="300"
-              data-aos-duration="1000"
+              onClick={() => {
+                scrollTo(HomeRef.current);
+              }}
             >
               Home
             </li>
             <li
-              className="underline"
+              className={`underline ${(visibleSection === "About" || visibleSection === "Experience") && "active"}`}
               style={toggleTheme ? { color: "#121212" } : { color: "#fbf1c7" }}
-              data-aos="fade-down"
-              data-aos-delay="500"
-              data-aos-duration="1000"
+              onClick={() => {
+                scrollTo(AboutRef.current);
+              }}
             >
               About
             </li>
             <li
-              className="underline"
+              className={`underline ${visibleSection === "Project" && "active"}`}
               style={toggleTheme ? { color: "#121212" } : { color: "#fbf1c7" }}
-              data-aos="fade-down"
-              data-aos-delay="700"
-              data-aos-duration="1000"
+              onClick={() => {
+                scrollTo(ProjectRef.current);
+              }}
             >
               Project
             </li>
             <li
-              className="underline"
+              className={`underline ${visibleSection === "Skill" && "active"}`}
               style={toggleTheme ? { color: "#121212" } : { color: "#fbf1c7" }}
-              data-aos="fade-down"
-              data-aos-delay="900"
-              data-aos-duration="1000"
+              onClick={() => {
+                scrollTo(SkillRef.current);
+              }}
             >
               Skill
             </li>
+            
             <li
-              className="underline"
+              className={`underline ${visibleSection === "Blog" && "active"}`}
               style={toggleTheme ? { color: "#121212" } : { color: "#fbf1c7" }}
-              data-aos="fade-down"
-              data-aos-delay="1100"
-              data-aos-duration="1000"
+              onClick={() => {
+                scrollTo(BlogRef.current);
+              }}
             >
               Blog
             </li>
@@ -100,18 +100,14 @@ const Nav: React.FC = () => {
           </div>
         </div>
         <button className="navbar__button"
-          data-aos="fade-down"
-          data-aos-delay="1700"
-          data-aos-duration="1000"
         >RESUME</button>
         <div>
           <div className="navbar__burger">
             <UseAnimations animation={menu3} size={38} strokeColor="#ff6f00" />
           </div>
         </div>
-
       </div>
-    </>
+    </div>
   );
 };
 export default Nav;

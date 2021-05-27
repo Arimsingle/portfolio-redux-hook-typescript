@@ -131,6 +131,8 @@
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
+        // display: block;
+
         .png-goal-container {
             display: block;
             .png-goal {
@@ -140,6 +142,8 @@
             }
         }
         &__education {
+            display: block;
+
             .timeline {
                 text-align: center;
             }

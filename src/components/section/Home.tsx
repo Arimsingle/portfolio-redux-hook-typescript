@@ -4,7 +4,7 @@ import { stateReduxType } from "../../redux/store";
 const Home: React.FC = () => {
   const toggleTheme = useSelector((state: stateReduxType) => state.theme);
   return (
-    <div style={{ marginTop: "60px" }}>
+    <div >
       <div
         className="text"
         data-aos="fade-down"
@@ -38,7 +38,7 @@ const Home: React.FC = () => {
         />
         <span
           data-aos="fade-up"
-          data-aos-delay="1000"
+          data-aos-delay="3000"
           data-aos-duration="1000"
           className={toggleTheme ? "photo__scroll_dart" : "photo__scroll"}
         ></span>
