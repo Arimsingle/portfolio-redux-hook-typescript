@@ -25,15 +25,15 @@ body {
     padding: 0;
     box-sizing: border-box;
     transition: all 0.25s linear;
-    @include breakpoint-down(sm) {
-        height: auto;
-    }
-    @include breakpoint-up(sm) {
-        height: auto;
-    }
-    @include breakpoint-up(lg) {
-        height: 100vh;
-    }
+    // @include breakpoint-down(sm) {
+    //     height: 100vh;
+    // }
+    // @include breakpoint-up(sm) {
+    //     height: 100vh;
+    // }
+    // @include breakpoint-up(lg) {
+    //     height: 100vh;
+    // }
     // background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1015%26quot%3b)' fill='none'%3e%3cpath d='M420.398%2c574.691C469.02%2c577.265%2c520.875%2c560.192%2c544.039%2c517.365C566.431%2c475.965%2c546.878%2c427.257%2c521.621%2c387.54C498.6%2c351.339%2c463.14%2c326.624%2c420.398%2c322.939C369.251%2c318.529%2c308.848%2c322.302%2c283.633%2c367.02C258.637%2c411.348%2c289.54%2c462.872%2c317.53%2c505.373C341.905%2c542.385%2c376.143%2c572.348%2c420.398%2c574.691' fill='rgba(142%2c 93%2c 28%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M27.659%2c247.68C58.001%2c248.119%2c89.8%2c237.821%2c104.361%2c211.198C118.496%2c185.353%2c108.427%2c154.238%2c92.214%2c129.643C77.793%2c107.766%2c53.826%2c96.197%2c27.659%2c94.839C-1.61%2c93.32%2c-33.869%2c97.582%2c-49.648%2c122.28C-66.355%2c148.432%2c-61.58%2c182.617%2c-45.295%2c209.034C-29.817%2c234.141%2c-1.833%2c247.254%2c27.659%2c247.68' fill='rgba(142%2c 93%2c 28%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M790.443%2c63.271C817.252%2c64.584%2c847.579%2c64.359%2c862.514%2c42.057C878.673%2c17.927%2c874.089%2c-14.319%2c859.037%2c-39.155C844.543%2c-63.07%2c818.403%2c-77.33%2c790.443%2c-76.86C763.278%2c-76.403%2c738.655%2c-60.813%2c725.73%2c-36.915C713.396%2c-14.111%2c715.579%2c13.77%2c729.646%2c35.548C742.598%2c55.601%2c766.6%2c62.103%2c790.443%2c63.271' fill='rgba(142%2c 93%2c 28%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M191.821%2c329.994C241.868%2c327.021%2c274.079%2c282.867%2c298.919%2c239.318C323.449%2c196.314%2c346.726%2c145.214%2c321.527%2c102.599C296.597%2c60.439%2c240.777%2c56.701%2c191.821%2c58.204C146.233%2c59.603%2c100.705%2c72.341%2c75.21%2c110.159C46.426%2c152.855%2c36.03%2c208.012%2c60.159%2c253.5C85.652%2c301.558%2c137.516%2c333.22%2c191.821%2c329.994' fill='rgba(142%2c 93%2c 28%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M543.366%2c523.928C595.553%2c527.879%2c648.117%2c498.963%2c670.894%2c451.843C691.638%2c408.93%2c667.367%2c361.559%2c641.071%2c321.805C618.183%2c287.202%2c584.778%2c261.555%2c543.366%2c259.045C496.866%2c256.227%2c445.428%2c267.884%2c422.745%2c308.574C400.441%2c348.584%2c423.022%2c394.806%2c445.407%2c434.771C468.532%2c476.058%2c496.179%2c520.355%2c543.366%2c523.928' fill='rgba(142%2c 93%2c 28%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1093.811%2c513.587C1135.288%2c513.98%2c1170.036%2c486.867%2c1192.051%2c451.713C1215.791%2c413.805%2c1230.39%2c367.714%2c1210.142%2c327.831C1188.216%2c284.642%2c1142.075%2c254.128%2c1093.811%2c258.207C1050.162%2c261.896%2c1026.651%2c305.739%2c1007.187%2c344.982C990.481%2c378.665%2c981.562%2c416.439%2c998.744%2c449.881C1017.428%2c486.247%2c1052.928%2c513.2%2c1093.811%2c513.587' fill='rgba(142%2c 93%2c 28%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1015'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
 }
 
@@ -44,15 +44,15 @@ body {
     padding: 0;
     box-sizing: border-box;
     transition: all 0.25s linear;
-    @include breakpoint-down(sm) {
-        height: auto;
-    }
-    @include breakpoint-up(sm) {
-        height: auto;
-    }
-    @include breakpoint-up(lg) {
-        height: 100vh;
-    }
+    // @include breakpoint-down(sm) {
+    //     height: auto;
+    // }
+    // @include breakpoint-up(sm) {
+    //     height: auto;
+    // }
+    // @include breakpoint-up(lg) {
+    //     height: 100vh;
+    // }
     // background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1015%26quot%3b)' fill='none'%3e%3cpath d='M420.398%2c574.691C469.02%2c577.265%2c520.875%2c560.192%2c544.039%2c517.365C566.431%2c475.965%2c546.878%2c427.257%2c521.621%2c387.54C498.6%2c351.339%2c463.14%2c326.624%2c420.398%2c322.939C369.251%2c318.529%2c308.848%2c322.302%2c283.633%2c367.02C258.637%2c411.348%2c289.54%2c462.872%2c317.53%2c505.373C341.905%2c542.385%2c376.143%2c572.348%2c420.398%2c574.691' fill='rgba(142%2c 93%2c 28%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M27.659%2c247.68C58.001%2c248.119%2c89.8%2c237.821%2c104.361%2c211.198C118.496%2c185.353%2c108.427%2c154.238%2c92.214%2c129.643C77.793%2c107.766%2c53.826%2c96.197%2c27.659%2c94.839C-1.61%2c93.32%2c-33.869%2c97.582%2c-49.648%2c122.28C-66.355%2c148.432%2c-61.58%2c182.617%2c-45.295%2c209.034C-29.817%2c234.141%2c-1.833%2c247.254%2c27.659%2c247.68' fill='rgba(142%2c 93%2c 28%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M790.443%2c63.271C817.252%2c64.584%2c847.579%2c64.359%2c862.514%2c42.057C878.673%2c17.927%2c874.089%2c-14.319%2c859.037%2c-39.155C844.543%2c-63.07%2c818.403%2c-77.33%2c790.443%2c-76.86C763.278%2c-76.403%2c738.655%2c-60.813%2c725.73%2c-36.915C713.396%2c-14.111%2c715.579%2c13.77%2c729.646%2c35.548C742.598%2c55.601%2c766.6%2c62.103%2c790.443%2c63.271' fill='rgba(142%2c 93%2c 28%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M191.821%2c329.994C241.868%2c327.021%2c274.079%2c282.867%2c298.919%2c239.318C323.449%2c196.314%2c346.726%2c145.214%2c321.527%2c102.599C296.597%2c60.439%2c240.777%2c56.701%2c191.821%2c58.204C146.233%2c59.603%2c100.705%2c72.341%2c75.21%2c110.159C46.426%2c152.855%2c36.03%2c208.012%2c60.159%2c253.5C85.652%2c301.558%2c137.516%2c333.22%2c191.821%2c329.994' fill='rgba(142%2c 93%2c 28%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M543.366%2c523.928C595.553%2c527.879%2c648.117%2c498.963%2c670.894%2c451.843C691.638%2c408.93%2c667.367%2c361.559%2c641.071%2c321.805C618.183%2c287.202%2c584.778%2c261.555%2c543.366%2c259.045C496.866%2c256.227%2c445.428%2c267.884%2c422.745%2c308.574C400.441%2c348.584%2c423.022%2c394.806%2c445.407%2c434.771C468.532%2c476.058%2c496.179%2c520.355%2c543.366%2c523.928' fill='rgba(142%2c 93%2c 28%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1093.811%2c513.587C1135.288%2c513.98%2c1170.036%2c486.867%2c1192.051%2c451.713C1215.791%2c413.805%2c1230.39%2c367.714%2c1210.142%2c327.831C1188.216%2c284.642%2c1142.075%2c254.128%2c1093.811%2c258.207C1050.162%2c261.896%2c1026.651%2c305.739%2c1007.187%2c344.982C990.481%2c378.665%2c981.562%2c416.439%2c998.744%2c449.881C1017.428%2c486.247%2c1052.928%2c513.2%2c1093.811%2c513.587' fill='rgba(142%2c 93%2c 28%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1015'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
     // -webkit-background-size: cover;
     // -moz-background-size: cover;

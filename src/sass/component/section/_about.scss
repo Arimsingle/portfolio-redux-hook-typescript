@@ -205,10 +205,12 @@
         }
     }
     @include breakpoint-down(sm) {
-        margin-top: 130px;
+        margin: 0;
+
     }
     @include breakpoint-up(sm) {
-        margin-top: 130px;
+        margin: 0;
+
     }
     @include breakpoint-up(lg) {
         margin: 0;

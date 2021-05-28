@@ -60,7 +60,7 @@ const App: React.FC = () => {
       const { height: headerHeight } = getDimensions(headerRef.current);
       const scrollPosition = (window.scrollY + 300) + headerHeight;
 
-      const selected = sectionRefs.find(({ section, ref }) => {
+      const selected = sectionRefs.find(({ _, ref }: any) => {
         const ele = ref.current;
         if (ele) {
           const { offsetBottom, offsetTop } = getDimensions(ele);
@@ -83,7 +83,7 @@ const App: React.FC = () => {
 
   return (
     <div className={handleThemeChanged()}>
-      <header ref={headerRef}>
+      <header>
         <Nav headerRef={headerRef}
           scrollTo={scrollTo}
           HomeRef={HomeRef}
@@ -103,10 +103,10 @@ const App: React.FC = () => {
       <section className={handleThemeChanged()} id="Experience" ref={ExperienceRef} style={{ height: "200vh" }}>
         <Experience />
       </section>
-      <section className={handleThemeChanged()} id="Project" ref={ProjectRef} style={{height:"auto"}}>
+      <section className={handleThemeChanged()} id="Project" ref={ProjectRef} style={{ height: "auto" }}>
         <Project />
       </section>
-      <section className={handleThemeChanged()} id="Skill" ref={SkillRef} style={{height:"auto"}}>
+      <section className={handleThemeChanged()} id="Skill" ref={SkillRef} style={{ height: "auto" }}>
         <Skill />
       </section>
       <section className={handleThemeChanged()} id="Blog" ref={BlogRef}>

@@ -3,11 +3,20 @@ import { themeService } from "../redux/services";
 import { stateReduxType } from "../redux/store";
 import UseAnimations from 'react-useanimations';
 import menu3 from 'react-useanimations/lib/menu3'
+import { useState } from "react";
+import { FiHome } from "react-icons/fi";
+import { FiUser } from "react-icons/fi";
+import {
+  FiBookOpen,
+  FiThumbsUp,
+  FiBriefcase,
+  FiDownload
+} from "react-icons/fi";
 const Nav = ({ headerRef, scrollTo, HomeRef, AboutRef, ExperienceRef, ProjectRef, SkillRef, BlogRef, visibleSection }: any) => {
   //theme default is dart color
   const toggleTheme = useSelector((state: stateReduxType) => state.theme);
   const dispatch = useDispatch();
-
+  const [bergerActive, setBergerActive] = useState(false);
   return (
     <div ref={headerRef}>
       <div className="navbar" style={toggleTheme ? { backgroundColor: "#fff" } : { backgroundColor: "#121212" }}>
@@ -56,7 +65,7 @@ const Nav = ({ headerRef, scrollTo, HomeRef, AboutRef, ExperienceRef, ProjectRef
             >
               Skill
             </li>
-            
+
             <li
               className={`underline ${visibleSection === "Blog" && "active"}`}
               style={toggleTheme ? { color: "#121212" } : { color: "#fbf1c7" }}
@@ -103,11 +112,83 @@ const Nav = ({ headerRef, scrollTo, HomeRef, AboutRef, ExperienceRef, ProjectRef
         >RESUME</button>
         <div>
           <div className="navbar__burger">
-            <UseAnimations animation={menu3} size={38} strokeColor="#ff6f00" />
+            <UseAnimations
+              animation={menu3}
+              size={38}
+              strokeColor="#ff6f00"
+              reverse={bergerActive}
+              onClick={() => {
+                setBergerActive(!bergerActive);
+              }}
+            />
           </div>
         </div>
       </div>
-    </div>
+      <div className="berger">
+        <ul className={bergerActive ? "nav-menu active" : "nav-menu"}>
+          <li>
+            <div
+              className={`highlight ${visibleSection === "Home" && "active"} burger-contact-start`}
+              style={toggleTheme ? { color: "#121212" } : { color: "#fbf1c7" }}
+              onClick={() => {
+                scrollTo(HomeRef.current);
+              }}>
+              <FiHome />
+              <p>Home</p>
+            </div>
+          </li>
+          <li>
+            <div
+              className={`highlight ${visibleSection === "About" && "active"} burger-contact-start`}
+              style={toggleTheme ? { color: "#121212" } : { color: "#fbf1c7" }}
+              onClick={() => {
+                scrollTo(AboutRef.current);
+              }}>
+              <FiUser />
+              <p>About</p>
+            </div>
+          </li>
+          <li>
+            <div className={`highlight ${visibleSection === "Project" && "active"} burger-contact-start`}
+              style={toggleTheme ? { color: "#121212" } : { color: "#fbf1c7" }}
+              onClick={() => {
+                scrollTo(ProjectRef.current);
+              }}>
+              <FiBookOpen />
+              <p>Project</p>
+            </div>
+          </li>
+          <li>
+            <div className={`highlight ${visibleSection === "Skill" && "active"} burger-contact-start`}
+              style={toggleTheme ? { color: "#121212" } : { color: "#fbf1c7" }}
+              onClick={() => {
+                scrollTo(SkillRef.current);
+              }}>
+              <FiThumbsUp />
+              <p>Skill</p>
+            </div>
+          </li>
+          <li>
+            <div className={`highlight ${visibleSection === "Blog" && "active"} burger-contact-start`}
+              style={toggleTheme ? { color: "#121212" } : { color: "#fbf1c7" }}
+              onClick={() => {
+                scrollTo(BlogRef.current);
+              }}>
+              <FiBriefcase />
+              <p>Blog</p>
+            </div>
+          </li>
+          <li>
+            <div className="burger-contact-start"
+              style={toggleTheme ? { color: "#121212" } : { color: "#fbf1c7" }}
+            >
+              <FiDownload />
+              <p>Resume</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div >
   );
 };
 export default Nav;

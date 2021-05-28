@@ -1,7 +1,7 @@
 import { Timeline } from "antd";
 import { useSelector } from "react-redux";
 import { stateReduxType } from "../../redux/store";
-import { timeLineEducations, timeLineExperiences } from "../shared/variables";
+import { timeLineEducations, timeLineExperiences } from "../../shared/variables";
 const Experience = () => {
   const toggleTheme = useSelector((state: stateReduxType) => state.theme);
   return (

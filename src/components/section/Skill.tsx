@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { stateReduxType } from "../../redux/store";
-import { Languages, Tools_Libraries, Databases } from "../shared/variables";
-import { timeDelayLanguages, timeDelayTools_Libraries, timeDelayDatabases } from "../shared/variables";
+import { Languages, Tools_Libraries, Databases } from "../../shared/variables";
+import { timeDelayLanguages, timeDelayTools_Libraries, timeDelayDatabases } from "../../shared/variables";
 const Skill: React.FC = () => {
   const toggleTheme = useSelector((state: stateReduxType) => state.theme);
   return (

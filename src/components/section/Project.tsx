@@ -9,7 +9,7 @@ import {
   toolsObjDetection,
   // toolsBackPink,
   tagsColor,
-} from "../shared/variables";
+} from "../../shared/variables";
 const Project: React.FC = () => {
   const toggleTheme = useSelector((state: stateReduxType) => state.theme);
   return (
