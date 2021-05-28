@@ -49,21 +49,21 @@
 
     @include breakpoint-down(sm) {
         &__header {
-            top: 0rem;
+            top: 2rem;
             width: 18.75rem;
             height: 18.75rem;
         }
     }
     @include breakpoint-up(sm) {
         &__header {
-            top: 0rem;
+            top: 3rem;
             width: 23.75rem;
             height: 23.75rem;
         }
     }
     @include breakpoint-up(lg) {
         &__header {
-            top: 0rem;
+            top: 3rem;
             width: 25rem;
             height: 25rem;
         }
@@ -107,7 +107,7 @@
         }
 
         &:hover {
-            cursor: pointer;
+            cursor: default;
         }
 
         @keyframes scroll {
@@ -125,19 +125,19 @@
     @include breakpoint-down(sm) {
         &__scroll,
         &__scroll_dart {
-            top: 18rem;
+            top: 28rem;
         }
     }
     @include breakpoint-up(sm) {
         &__scroll,
         &__scroll_dart {
-            top: 25.375rem;
+            top: 30.375rem;
         }
     }
     @include breakpoint-up(lg) {
         &__scroll,
         &__scroll_dart {
-            top: 30rem;
+            top: 38rem;
         }
     }
 }
