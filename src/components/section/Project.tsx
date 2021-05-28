@@ -90,7 +90,7 @@ const Project: React.FC = () => {
                 rel="noreferrer">
                 <div className="card__overlay">
                   <img
-                    src="images/covid-project.PNG"
+                    src="images/covid-project.png"
                     className="card__background"
                     alt="covid"
                   />
