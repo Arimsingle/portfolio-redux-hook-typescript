@@ -241,7 +241,6 @@
     }
 }
 
-
 .berger {
     position: relative;
     display: flex;
@@ -313,4 +312,8 @@
     @include breakpoint-up(md) {
         display: none;
     }
+}
+
+.hilded {
+    display: none;
 }

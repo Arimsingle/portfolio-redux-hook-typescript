@@ -124,7 +124,7 @@ const Nav = ({ headerRef, scrollTo, HomeRef, AboutRef, ExperienceRef, ProjectRef
           </div>
         </div>
       </div>
-      <div className="berger">
+      <div className={bergerActive ? "berger" : "hilded"}>
         <ul className={bergerActive ? "nav-menu active" : "nav-menu"}>
           <li>
             <div
