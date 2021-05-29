@@ -108,8 +108,12 @@ const Nav = ({ headerRef, scrollTo, HomeRef, AboutRef, ExperienceRef, ProjectRef
             )}
           </div>
         </div>
-        <button className="navbar__button"
-        >RESUME</button>
+        <a href="https://drive.google.com/file/d/16IZcgQ6WzGJo822I1hIKsl9THSV9k1z7/view?usp=sharing"
+          target="_blank"
+          rel="noreferrer">
+          <button className="navbar__button"
+          >RESUME</button>
+        </a>
         <div>
           <div className="navbar__burger">
             <UseAnimations
@@ -182,8 +186,13 @@ const Nav = ({ headerRef, scrollTo, HomeRef, AboutRef, ExperienceRef, ProjectRef
             <div className="burger-contact-start"
               style={toggleTheme ? { color: "#121212" } : { color: "#fbf1c7" }}
             >
-              <FiDownload />
-              <p>Resume</p>
+              <a
+                href="https://drive.google.com/file/d/16IZcgQ6WzGJo822I1hIKsl9THSV9k1z7/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer">
+                <FiDownload />
+                <p>Resume</p>
+              </a>
             </div>
           </li>
         </ul>
