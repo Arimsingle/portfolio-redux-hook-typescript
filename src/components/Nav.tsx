@@ -13,7 +13,7 @@ import {
   FiDownload
 } from "react-icons/fi";
 const Nav = ({ headerRef, scrollTo, HomeRef, AboutRef, ExperienceRef, ProjectRef, SkillRef, BlogRef, visibleSection }: any) => {
-  //theme default is dart color
+  //theme default is black theme
   const toggleTheme = useSelector((state: stateReduxType) => state.theme);
   const dispatch = useDispatch();
   const [bergerActive, setBergerActive] = useState(false);
@@ -108,7 +108,7 @@ const Nav = ({ headerRef, scrollTo, HomeRef, AboutRef, ExperienceRef, ProjectRef
             )}
           </div>
         </div>
-        <a href="https://drive.google.com/file/d/16IZcgQ6WzGJo822I1hIKsl9THSV9k1z7/view?usp=sharing"
+        <a href="https://drive.google.com/drive/folders/1D8AISmxO2hvymSXy2OwOXR9ZJ34XZyW0?usp=sharing"
           target="_blank"
           rel="noreferrer">
           <button className="navbar__button"
@@ -128,7 +128,7 @@ const Nav = ({ headerRef, scrollTo, HomeRef, AboutRef, ExperienceRef, ProjectRef
           </div>
         </div>
       </div>
-      <div className={bergerActive ? "berger" : "hilded"}>
+      <div className={`berger ${!bergerActive ? "hilded" : ""}`}>
         <ul className={bergerActive ? "nav-menu active" : "nav-menu"}>
           <li>
             <div
@@ -187,7 +187,7 @@ const Nav = ({ headerRef, scrollTo, HomeRef, AboutRef, ExperienceRef, ProjectRef
               style={toggleTheme ? { color: "#121212" } : { color: "#fbf1c7" }}
             >
               <a
-                href="https://drive.google.com/file/d/16IZcgQ6WzGJo822I1hIKsl9THSV9k1z7/view?usp=sharing"
+                href="https://drive.google.com/drive/folders/1D8AISmxO2hvymSXy2OwOXR9ZJ34XZyW0?usp=sharing"
                 target="_blank"
                 rel="noreferrer">
                 <FiDownload />
