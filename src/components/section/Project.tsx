@@ -151,8 +151,7 @@ const Project: React.FC = () => {
                       <Tag color="orange">#Responsive</Tag>
                     </span>
                     <p className="card__description">
-                      เป็นโปรเจคที่นำเทคโนโลยี่ Blockchain กับ Deep learning
-                      มายกระดับการปฏิบัติหน้าของเจ้าหน้าที่ตำรวจ
+                      เป็นฟังก์ชันย่อยของโปรเจค Smart police ที่สามารถระบุตัวตนด้วยการถอดรหัสใบหน้า
                   </p>
                     <ul className="card__tools">
                       {toolsFaceDecrypt.map((tool, index) => {
@@ -195,8 +194,7 @@ const Project: React.FC = () => {
                       <Tag color="orange">#Nope -. -</Tag>
                     </span>
                     <p className="card__description">
-                      เป็นโปรเจคที่นำเทคโนโลยี่ Blockchain กับ Deep learning
-                      มายกระดับการปฏิบัติหน้าของเจ้าหน้าที่ตำรวจ
+                      เป็นโปรเจคที่นำเทคโนโลยี่ Image Processing มาตรวจผลส้มว่ามีคุณภาพพอที่จะขายได้หรือไม่
                   </p>
                     <ul className="card__tools">
                       {toolsObjDetection.map((tool, index) => {

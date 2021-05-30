@@ -85,7 +85,7 @@ const About: React.FC = () => {
                 data-aos-duration="1000"
               >
                 <FiMail className="icon" />
-                <span>arim.alif@gmail.com</span>
+                <span>arim.coe60@gmail.com</span>
               </li>
               <li
                 className={toggleTheme ? "soft_theme" : "dart_theme"}
