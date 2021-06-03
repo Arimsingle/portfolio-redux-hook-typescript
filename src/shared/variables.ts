@@ -133,11 +133,11 @@ export const timeLineEducations: string[][] = [
   ["200", "2017-2021", "Bechelor of Computer Engineering Prince of Songkla University Phuket Campus"],
 ]
 export const timeLineExperiences: string[][] = [
-  ["100", "2014-2017", "Blockchain Developer Intern at Bitkub"],
-  ["200", "2017-2021", "Super AI 2021"],
-  ["300", "2017-2021", "NSC 2021"],
-  ["500", "2017-2021", "Top Gun 2021"],
-  ["600", "2017-2021", "Blockchain and Smart Contract for Developers at PSU Phuket"],
+  ["100", "2020", "Blockchain Developer Intern at Bitkub"],
+  ["200", "2020", "Super AI 2021"],
+  ["300", "2021", "NSC 2021"],
+  ["500", "2021", "Top Gun 2021"],
+  ["600", "2021", "Blockchain and Smart Contract for Developers at PSU Phuket"],
 ]
 
 
