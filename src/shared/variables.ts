@@ -134,7 +134,7 @@ export const timeLineEducations: string[][] = [
 ]
 export const timeLineExperiences: string[][] = [
   ["100", "2020", "Blockchain Developer Intern at Bitkub"],
-  ["200", "2020", "Super AI 2021"],
+  ["200", "2021", "Super AI 2021"],
   ["300", "2021", "NSC 2021"],
   ["500", "2021", "Top Gun 2021"],
   ["600", "2021", "Blockchain and Smart Contract for Developers at PSU Phuket"],
