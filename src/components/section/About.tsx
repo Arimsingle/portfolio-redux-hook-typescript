@@ -76,7 +76,7 @@ const About: React.FC = () => {
                 data-aos-duration="1000"
               >
                 <FiPhone className="icon" />
-                <span>0936783698</span>
+                <span>0936783xxx</span>
               </li>
               <li
                 className={toggleTheme ? "soft_theme" : "dart_theme"}
@@ -103,7 +103,7 @@ const About: React.FC = () => {
                 data-aos-duration="1000"
               >
                 <RiCommunityLine className="icon" />
-                <span>208 M.5 Muno-Sungaikolok, Narathiwak 96120</span>
+                <span>----------</span>
               </li>
             </ul>
             <ul className="icon_container">
